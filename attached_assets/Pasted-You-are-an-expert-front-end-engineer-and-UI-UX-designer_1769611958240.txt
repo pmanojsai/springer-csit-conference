@@ -1,0 +1,97 @@
+You are an expert front-end engineer and UI/UX designer. Your task is to create a complete, production-ready, responsive single-page web application for the International Conference on Artificial Intelligence, Cyber Security & Digital Forensics (AICDF 2026) organized by IEEE – KL University.
+
+CONFERENCE CONTEXT
+
+Title: International Conference on Artificial Intelligence, Cyber Security & Digital Forensics (AICDF 2026)
+Theme: Artificial Intelligence, Data Science, Cyber Forensics
+Mode: Hybrid (in-person + virtual)
+Frequency: Annual
+Organizer: IEEE – KL University
+MANDATORY WEBSITE SECTIONS (implement as anchor-linked sections within a single-page application):
+
+HOME/HERO SECTION
+Full-viewport hero with conference title and tagline
+Primary CTA buttons: "Register Now" (links to Registration section) and "Call for Papers" (links to submission guidelines placeholder)
+Key Information Bar: Hybrid Event • Annual Conference • IEEE Publication • Global Participants
+ABOUT THE CONFERENCE
+Mission statement and conference objectives
+2-3 paragraph overview with key focus areas
+CONFERENCE DETAILS
+Theme: Artificial Intelligence, Data Science, Cyber Forensics
+Mode: Hybrid
+Frequency: Annual
+Organizer details
+ADVISORY BOARD
+Grid layout (3-4 columns desktop, 1-2 mobile)
+Members from IITs, NITs, International Universities
+Placeholder avatars, names, affiliations, brief bios
+PROGRAM COMMITTEE
+Similar grid/list layout
+Placeholder data for committee members
+ORGANIZING COMMITTEE
+Hierarchical structure (Chair, Co-Chairs, Technical Coordinators, Student Volunteers)
+REGISTRATION PAGE
+Form fields: Name, Email, Affiliation, Role (Student/Professional), Paper Title (optional)
+Payment Placeholder: Disabled "Pay with Razorpay" button with inline comment: "// TODO: Insert Razorpay script & API keys here"
+Fee table with categories (IEEE Member, Non-Member, Student) and pricing (Early Bird, Regular, Virtual)
+Terms & Conditions checkbox
+IMPORTANT DATES
+Timeline/card layout with key deadlines:
+Paper Submission Deadline
+Acceptance Notification
+Camera-Ready Submission
+Registration Deadline
+Conference Dates
+CONTACT US
+Contact form (Name, Email, Subject, Message)
+Static contact details (email, phone, address)
+Google Maps embed placeholder
+FOOTER
+IEEE branding logo prominently displayed
+Quick links to all sections
+Social media icons
+Copyright notice
+UI/UX REQUIREMENTS
+
+Color Palette: IEEE Red (#D0021B or #CC0000) for accents, White (#FFFFFF) for backgrounds
+Typography: Montserrat/Inter for headings, Roboto/Open Sans for body text
+Design Language: Modern, minimal, academic-grade with IEEE visual identity
+Responsiveness: Mobile-first design with fluid grid (breakpoints: ≤480px, 768px, 1024px, ≥1440px)
+Animations: Subtle CSS transitions (fade-in on scroll, hover effects)
+Accessibility: WCAG 2.1 AA compliance - proper ARIA roles, focus outlines, alt text, keyboard navigation
+Navigation: Sticky navbar with smooth scrolling, hamburger menu for mobile
+TECHNICAL SPECIFICATIONS
+
+Architecture: Single-page application with anchor navigation
+Editable Content: All text content driven from src/data/conference.json for easy updates
+SEO: Meta tags, Open Graph tags, sitemap.xml generation
+Performance: Optimized assets, lazy loading, WebP images
+Framework: React 18 + Next.js 13 (App Router) recommended
+Styling: Tailwind CSS 3.x with custom IEEE red theme
+Form Handling: React Hook Form with HTML5 validation fallback
+DELIVERABLES
+
+Complete source code with folder structure:
+public/ (static assets, IEEE logo, placeholder images)
+src/app/ (page components)
+src/components/ (reusable UI components)
+src/data/conference.json (all editable content)
+src/styles/ (Tailwind config, global CSS)
+README.md with setup, development, and deployment instructions
+Accessibility compliance checklist
+Inline comments marking future integration points
+OUTPUT FORMAT
+
+Provide each file as separate markdown code blocks prefixed with relative path:
+
+// src/app/page.tsx
+```tsx
+// file content
+Include "## How to Run" section with deployment commands
+FINAL INSTRUCTION: Generate the complete, production-ready web application that satisfies all UI/UX, functional, and technical requirements for IEEE AICDF 2026, ready for immediate deployment.
+
+This prompt synthesizes the strongest elements from all responses:
+
+From Response A: Technical depth, accessibility requirements, and structured deliverables
+From Response B: Visual clarity, branding emphasis, and practical layout elements
+From Response C: Balanced structure and user-focused design principles
