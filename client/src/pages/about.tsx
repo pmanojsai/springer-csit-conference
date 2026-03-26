@@ -144,20 +144,24 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <div className="relative h-full min-h-[400px] rounded-2xl overflow-hidden">
-                  <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2940&auto=format&fit=crop')] bg-cover bg-center"></div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-slate-900/40"></div>
-                  <div className="relative h-full bg-slate-900/60 backdrop-blur-sm p-8 flex flex-col justify-end">
-                    <div className="grid grid-cols-2 gap-4">
-                      {universityStats.map((stat, idx) => (
-                        <div key={idx} className="text-center">
-                          <div className="text-3xl font-bold text-primary mb-1">{stat.value}</div>
-                          <div className="text-sm text-slate-300">{stat.label}</div>
-                        </div>
-                      ))}
+                  <div className="relative h-full min-h-[400px] rounded-2xl overflow-hidden">
+                    <img
+                      src="/klu.avif"
+                      alt="KL University Campus"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-slate-900/30"></div>
+                    <div className="relative h-full flex flex-col justify-end p-8">
+                      <div className="grid grid-cols-2 gap-4">
+                        {universityStats.map((stat, idx) => (
+                          <div key={idx} className="text-center">
+                            <div className="text-3xl font-bold text-primary mb-1">{stat.value}</div>
+                            <div className="text-sm text-slate-300">{stat.label}</div>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
               </motion.div>
             </div>
           </div>
