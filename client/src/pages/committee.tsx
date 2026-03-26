@@ -89,7 +89,6 @@ const nationalTAC = [
   { name: "Rajib Ghosh",              designation: "Faculty, CSE",                      affiliation: "NIT Patna",                                           email: "rajib.ghosh@nitp.ac.in" },
 ];
 
-// ── Helper to generate initials avatar ────────────────────────────────────
 function getInitials(name: string) {
   return name
     .split(" ")
@@ -99,7 +98,6 @@ function getInitials(name: string) {
     .join("");
 }
 
-// ── Card ──────────────────────────────────────────────────────────────────
 interface Member {
   name: string;
   designation: string;
@@ -112,39 +110,34 @@ interface Member {
 function CommitteeMemberCard({ member, showContact = false }: { member: Member; showContact?: boolean }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, scale: 0.98 }}
+      whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      className="bg-white border border-slate-200 rounded-xl p-5 hover:border-primary/30 transition-all duration-300 hover:shadow-lg flex flex-col h-full"
+      className="bg-white border border-slate-200 rounded-xl p-4 hover:border-primary/40 transition-all duration-300 hover:shadow-md flex flex-col h-full"
     >
-      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-3 text-center sm:text-left">
-        {/* Avatar — initials-based since no photos available */}
-        <div className="w-14 h-14 shrink-0 rounded-full bg-gradient-to-br from-primary/20 to-blue-500/20 border-2 border-primary/20 flex items-center justify-center">
-          <span className="text-primary font-bold text-lg">{getInitials(member.name)}</span>
+      <div className="flex items-start gap-4 mb-2">
+        <div className="w-12 h-12 shrink-0 rounded-full bg-gradient-to-br from-primary/10 to-blue-500/10 border border-primary/20 flex items-center justify-center">
+          <span className="text-primary font-bold text-sm">{getInitials(member.name)}</span>
         </div>
         <div className="flex-1 min-w-0">
-          <h4 className="font-semibold text-slate-900 text-base leading-tight">{member.name}</h4>
-          <p className="text-primary font-medium text-sm mt-0.5">{member.designation}</p>
-          <p className="text-slate-500 text-sm mt-0.5 leading-snug">{member.affiliation}</p>
+          <h4 className="font-bold text-slate-900 text-sm leading-tight">{member.name}</h4>
+          <p className="text-primary font-medium text-xs mt-0.5">{member.designation}</p>
+          <p className="text-slate-500 text-xs mt-0.5 leading-snug">{member.affiliation}</p>
         </div>
       </div>
 
       {showContact && (member.email || member.phone) && (
-        <div className="space-y-1.5 text-sm mt-auto pt-3 border-t border-slate-100">
+        <div className="space-y-1 text-xs mt-auto pt-2 border-t border-slate-100 flex flex-col gap-1">
           {member.email && (
-            <a
-              href={`mailto:${member.email}`}
-              className="flex items-center justify-center sm:justify-start gap-2 text-slate-500 hover:text-primary transition-colors break-all sm:break-normal"
-            >
-              <Mail className="w-3.5 h-3.5 shrink-0" />
-              <span className="text-xs">{member.email}</span>
+            <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-slate-500 hover:text-primary truncate">
+              <Mail className="w-3 h-3 shrink-0" />
+              <span>{member.email}</span>
             </a>
           )}
           {member.phone && (
-            <div className="flex items-center justify-center sm:justify-start gap-2 text-slate-500">
-              <Phone className="w-3.5 h-3.5 shrink-0" />
-              <span className="text-xs">{member.phone}</span>
+            <div className="flex items-center gap-2 text-slate-500">
+              <Phone className="w-3 h-3 shrink-0" />
+              <span>{member.phone}</span>
             </div>
           )}
         </div>
@@ -153,47 +146,27 @@ function CommitteeMemberCard({ member, showContact = false }: { member: Member; 
   );
 }
 
-// ── Section wrapper ────────────────────────────────────────────────────────
-interface CommitteeSectionProps {
-  title: string;
-  members: Member[];
-  icon: React.ReactNode;
-  showContact?: boolean;
-  description?: string;
-  bg?: string;
-}
-
-function CommitteeSection({ title, members, icon, showContact = false, description, bg = "bg-white" }: CommitteeSectionProps) {
-  const cols =
-    members.length === 1 ? "grid-cols-1 max-w-sm mx-auto"
-    : members.length === 2 ? "grid-cols-1 sm:grid-cols-2 max-w-2xl mx-auto"
-    : members.length <= 4 ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-2"
-    : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
-
+function CommitteeSection({ title, members, icon, showContact = false, description, bg = "bg-white" }: any) {
   return (
-    <section className={`py-16 ${bg}`}>
+    <section className={cn("py-12 border-b border-slate-100 last:border-0", bg)}>
       <div className="container px-4 mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-10"
-        >
-          <div className="flex items-center justify-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+        <div className="flex flex-col mb-8">
+          <div className="flex items-center gap-3 mb-2">
+            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
               {icon}
             </div>
-            <h2 className="text-2xl md:text-3xl font-heading font-bold text-slate-900">{title}</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900">{title}</h2>
           </div>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-blue-500 mx-auto mb-4 rounded-full" />
-          {description && (
-            <p className="text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">{description}</p>
-          )}
-        </motion.div>
+          {description && <p className="text-sm text-slate-500 max-w-2xl">{description}</p>}
+        </div>
 
-        <div className={`grid gap-5 ${cols}`}>
-          {members.map((member, idx) => (
+        <div className={cn(
+          "grid gap-4",
+          members.length <= 2 ? "grid-cols-1 sm:grid-cols-2 max-w-4xl" : 
+          members.length === 3 ? "grid-cols-1 sm:grid-cols-3" :
+          "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+        )}>
+          {members.map((member: any, idx: number) => (
             <CommitteeMemberCard key={idx} member={member} showContact={showContact} />
           ))}
         </div>
@@ -202,105 +175,55 @@ function CommitteeSection({ title, members, icon, showContact = false, descripti
   );
 }
 
-// ── Page ───────────────────────────────────────────────────────────────────
 export default function CommitteePage() {
   return (
-    <div className="min-h-screen bg-background font-sans text-foreground selection:bg-primary/20 selection:text-primary">
+    <div className="min-h-screen bg-slate-50 font-sans text-foreground selection:bg-primary/20 selection:text-primary">
       <Navbar />
 
-      <main>
-        {/* Hero */}
-        <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden" style={starryBackground}>
-          <div className={cn("absolute inset-0", starryOverlay)} />
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-[40%] -left-[40%] w-[80%] h-[80%] rounded-full bg-primary/10 blur-3xl" />
-            <div className="absolute -bottom-[30%] -right-[30%] w-[60%] h-[60%] rounded-full bg-blue-500/10 blur-3xl" />
-          </div>
-
-          <div className="container relative z-10 px-4 pt-20">
+      <main className="pt-24 md:pt-32">
+        {/* Title Block - Compact NO GAP */}
+        <section className="bg-white border-b border-slate-200 py-10">
+          <div className="container px-4 mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-4xl mx-auto text-center text-white"
+              className="max-w-4xl"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/30 border border-primary/50 mb-6">
-                <Users className="w-4 h-4" />
-                <span className="text-xs font-medium tracking-wide uppercase">Leadership Team</span>
-              </div>
-
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6 tracking-tight">
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-white/80">
-                  Committee Members
-                </span>
+              <h1 className="text-3xl md:text-4xl font-bold font-heading text-slate-900 mb-2">
+                Committee Members
               </h1>
-
-              <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Meet the distinguished leaders and experts organizing AI-CQCOM 2026
+              <p className="text-slate-500">
+                Organizing Team and Technical Advisory Committee of <span className="text-primary font-semibold tracking-tight">AI-CQCOM 2026</span>
               </p>
             </motion.div>
           </div>
         </section>
 
-        {/* Committees */}
-        <CommitteeSection title="Chief Patrons"  members={chiefPatrons}         icon={<Crown className="w-5 h-5" />}       description="The visionary leaders guiding the conference" />
-        <CommitteeSection title="Co-Patrons"     members={coPatrons}            icon={<Star className="w-5 h-5" />}        description="Supporting the conference mission with their leadership" bg="bg-slate-50" />
-        <CommitteeSection title="General Chairs" members={generalChairs}        icon={<Award className="w-5 h-5" />}       description="Leading the conference organization and academic oversight" showContact />
-        <CommitteeSection title="Convener"       members={convener}             icon={<UserCheck className="w-5 h-5" />}   description="Coordinating all conference activities and operations" showContact bg="bg-slate-50" />
-        <CommitteeSection title="Co-Convener"    members={coConvener}           icon={<UserCheck className="w-5 h-5" />}   description="Assisting in conference coordination and management" showContact />
-        <CommitteeSection title="Steering Committee" members={steeringCommittee} icon={<Shield className="w-5 h-5" />}    description="Providing strategic direction and academic guidance" bg="bg-slate-50" />
-        <CommitteeSection title="Organizing Committee" members={organizingCommittee} icon={<Briefcase className="w-5 h-5" />} description="Dedicated team working behind the scenes" />
+        <CommitteeSection title="Chief Patrons" members={chiefPatrons} icon={<Crown className="w-4 h-4" />} />
+        <CommitteeSection title="Co-Patrons" members={coPatrons} icon={<Star className="w-4 h-4" />} bg="bg-slate-50" />
+        <CommitteeSection title="General Chairs" members={generalChairs} icon={<Award className="w-4 h-4" />} showContact />
+        <CommitteeSection title="Convener" members={convener} icon={<UserCheck className="w-4 h-4" />} showContact bg="bg-slate-50" />
+        <CommitteeSection title="Co-Convener" members={coConvener} icon={<UserCheck className="w-4 h-4" />} showContact />
+        <CommitteeSection title="Steering Committee" members={steeringCommittee} icon={<Shield className="w-4 h-4" />} bg="bg-slate-50" />
+        <CommitteeSection title="Organizing Committee" members={organizingCommittee} icon={<Briefcase className="w-4 h-4" />} />
 
-        {/* International TAC */}
+        {/* Technical Committee Section */}
         <CommitteeSection
           title="International Technical Advisory Committee"
           members={internationalTAC}
-          icon={<Globe className="w-5 h-5" />}
-          description="Global experts providing technical guidance and ensuring international standards"
+          icon={<Globe className="w-4 h-4" />}
+          description="Global experts providing technical guidance."
           showContact
           bg="bg-slate-50"
         />
 
-        {/* National TAC */}
         <CommitteeSection
           title="National Technical Advisory Committee"
           members={nationalTAC}
-          icon={<GraduationCap className="w-5 h-5" />}
-          description="Leading academicians from premier institutions across India"
+          icon={<GraduationCap className="w-4 h-4" />}
+          description="Leading academicians from across India."
           showContact
         />
-
-        {/* CTA */}
-        <section className="relative py-16 overflow-hidden" style={starryBackground}>
-          <div className={cn("absolute inset-0", starryOverlay)} />
-          <div className="relative z-10 container px-4 mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl font-bold text-white mb-4">Get in Touch with the Committee</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                For any queries about AI-CQCOM 2026, please feel free to contact our committee members
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={() => { window.location.href = '/contact'; }}
-                  className="px-6 py-3 bg-gradient-to-r from-primary to-blue-600 text-white font-medium rounded-lg hover:opacity-90 transition-opacity"
-                >
-                  Contact Committee
-                </button>
-                <button
-                  onClick={() => { window.location.href = '/registration'; }}
-                  className="px-6 py-3 bg-white/10 text-white font-medium rounded-lg hover:bg-white/20 transition-colors border border-white/10"
-                >
-                  Register for Conference
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
       </main>
 
       <Footer />

@@ -79,7 +79,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-white font-semibold text-lg mb-1">Address</h3>
                       <p className="text-gray-400 text-sm leading-relaxed mb-2">
-                        KLH University, Bachupally, Hyderabad, Telangana 500090
+                        KLH University, Bowrampet Campus, Hyderabad, Telangana 500043
                       </p>
                       <span className="text-xs text-gray-500">Visit us at our location</span>
                     </div>
@@ -149,7 +149,7 @@ export default function ContactPage() {
                 </h3>
                 <div className="flex-1 rounded-xl overflow-hidden border border-white/10 relative">
                   <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15220.84024479979!2d78.36151680193155!3d17.558362624535303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8d2e6fcce9a7%3A0xe5452fcdfd9cb57c!2sKL%20University%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1709825424564!5m2!1sen!2sin" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.17643537233!2d78.40193977516625!3d17.547294383366835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8f21c7b459b5%3A0xc307c84e835d6187!2sKLH%20University%20Bowrampet%20Hyderabad!5e0!3m2!1sen!2sin!4v1711484128414!5m2!1sen!2sin" 
                     width="100%" 
                     height="100%" 
                     style={{ border: 0, minHeight: '400px' }} 
