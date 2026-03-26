@@ -30,49 +30,42 @@
       "Quantum Computing"
     ]
   },
+  "internationalTechnicalCommittee": [
+    { "name": "Dr. Suresh Merugu", "role": "Assistant Professor, FHEA", "affiliation": "University of Southampton Malaysia" },
+    { "name": "Lydia Ray", "role": "Professor, Computer Sciences", "affiliation": "Columbus State University, Georgia, USA", "email": "ray_lydia@columbusstate.edu" },
+    { "name": "Osvaldo Gervasi", "role": "Professor", "affiliation": "University of Perugia, Italy", "email": "osvaldo.gervasi@unipg.it" },
+    { "name": "Haiming Liu", "role": "Professor, Computer Science", "affiliation": "University of Southampton, UK", "email": "h.liu@soton.ac.uk" },
+    { "name": "Dr. Obsagilo", "role": "Assistant Professor, School of Computer Science", "affiliation": "Wolleg University, Institute of Technology, Ethiopia" },
+    { "name": "Dr. Etana Fikadu", "role": "Assistant Professor, Computer Science", "affiliation": "Wolleg University, Institute of Technology, Ethiopia" },
+    { "name": "Dr. Bilal Ahmed", "role": "Professor", "affiliation": "Yaman University" }
+  ],
+  "nationalTechnicalCommittee": [
+    { "name": "Dr. Aditya Kumar Sahu", "role": "Faculty, CSE", "affiliation": "SRM-AP University" },
+    { "name": "Atul Negi", "role": "Professor, SCIS", "affiliation": "University of Hyderabad, India" },
+    { "name": "Dr. Ramesh Vatambeti", "role": "Professor, CSE", "affiliation": "Tezpur University (A Central University), Assam", "email": "rameshv@tezu.ernet.in" },
+    { "name": "Dr. Koteswararao CH", "role": "Associate Professor, IT Engineering", "affiliation": "Guru Ghasidas Vishwavidyalaya, Bilaspur (C.G)", "email": "koteswara.raoch@ggu.ac.in" },
+    { "name": "Dr. Annappa", "role": "Professor", "affiliation": "NIT Surathkal" },
+    { "name": "Dr. Sureindran", "role": "Professor", "affiliation": "NIT Puducherry" },
+    { "name": "Dr. Saroj Kumar Biswas", "role": "Professor", "affiliation": "NIT Silchar" },
+    { "name": "Dr. Prabhu Mohandass", "role": "Professor", "affiliation": "NIT Calicut" },
+    { "name": "Dr. AnandaKumar", "role": "Professor", "affiliation": "NIT Surathkal" },
+    { "name": "Dr. Pranesh Das", "role": "Professor", "affiliation": "NIT Calicut" },
+    { "name": "Dr. Jayakumar Loganthan", "role": "Professor", "affiliation": "NIT Agartala" },
+    { "name": "Dr. Mrinal Kanti Debbarma", "role": "Professor", "affiliation": "NIT Agartala" },
+    { "name": "Dr. Jagadeesh M S", "role": "Associate Professor, CSE", "affiliation": "NITTTR Kolkata", "email": "jagadeesh@nitttrkol.ac.in" },
+    { "name": "Dr. Vijay Bhaskar Semwal", "role": "Assistant Professor Grade-1", "affiliation": "MANIT Bhopal", "email": "vsemwal@manit.ac.in" },
+    { "name": "Dr. Vaibhav Soni", "role": "Assistant Professor", "affiliation": "MANIT Bhopal", "email": "vaibhavsoni@manit.ac.in" },
+    { "name": "Shridhar Sanshi", "role": "Faculty, CSE", "affiliation": "NIT Surathkal" },
+    { "name": "Dr. S. Ganapathy", "role": "Associate Professor, CSE", "affiliation": "NITTTR Bhopal" },
+    { "name": "Rajib Ghosh", "role": "Faculty, CSE", "affiliation": "NIT Patna", "email": "rajib.ghosh@nitp.ac.in" }
+  ],
   "advisoryBoard": [
-    { 
-      "name": "Dr. A. Sharma", 
-      "affiliation": "IIT Bombay", 
-      "role": "Professor, CSE",
-      "image": "https://randomuser.me/api/portraits/men/32.jpg",
-      "linkedin": "https://linkedin.com/in/example1"
-    },
-    { 
-      "name": "Dr. J. Smith", 
-      "affiliation": "Stanford University", 
-      "role": "Director, AI Lab",
-      "image": "https://randomuser.me/api/portraits/women/44.jpg",
-      "linkedin": "https://linkedin.com/in/example2"
-    },
-    { 
-      "name": "Dr. K. Rao", 
-      "affiliation": "NIT Warangal", 
-      "role": "Dean, Research",
-      "image": "https://randomuser.me/api/portraits/men/22.jpg",
-      "linkedin": "https://linkedin.com/in/example3"
-    },
-    { 
-      "name": "Dr. L. Zhang", 
-      "affiliation": "NUS Singapore", 
-      "role": "Assoc. Professor",
-      "image": "https://randomuser.me/api/portraits/women/63.jpg",
-      "linkedin": "https://linkedin.com/in/example4"
-    },
-    { 
-      "name": "Dr. P. Gupta", 
-      "affiliation": "IIIT Hyderabad", 
-      "role": "Chair, Cyber Security",
-      "image": "https://randomuser.me/api/portraits/men/45.jpg",
-      "linkedin": "https://linkedin.com/in/example5"
-    },
-    { 
-      "name": "Dr. R. Williams", 
-      "affiliation": "MIT", 
-      "role": "Senior Researcher",
-      "image": "https://randomuser.me/api/portraits/women/28.jpg",
-      "linkedin": "https://linkedin.com/in/example6"
-    }
+    { "name": "Dr. Suresh Merugu", "role": "Assistant Professor, FHEA", "affiliation": "University of Southampton Malaysia", "image": "" },
+    { "name": "Lydia Ray", "role": "Professor, Computer Sciences", "affiliation": "Columbus State University, USA", "image": "" },
+    { "name": "Osvaldo Gervasi", "role": "Professor", "affiliation": "University of Perugia, Italy", "image": "" },
+    { "name": "Haiming Liu", "role": "Professor, Computer Science", "affiliation": "University of Southampton, UK", "image": "" },
+    { "name": "Dr. Annappa", "role": "Professor", "affiliation": "NIT Surathkal", "image": "" },
+    { "name": "Dr. Saroj Kumar Biswas", "role": "Professor", "affiliation": "NIT Silchar", "image": "" }
   ],
   "organizingCommittee": {
     "patrons": ["Prof. K. Satyanarayana, President, KL University"],

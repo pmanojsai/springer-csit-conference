@@ -11,6 +11,8 @@ import CommitteePage from "@/pages/committee";
 import DatesPage from "@/pages/dates";
 import RegistrationPage from "@/pages/registration";
 
+import ContactPage from "@/pages/contact";
+
 function Router() {
   return (
     <Switch>
@@ -20,6 +22,7 @@ function Router() {
       <Route path="/committee" component={CommitteePage} />
       <Route path="/dates" component={DatesPage} />
       <Route path="/registration" component={RegistrationPage} />
+      <Route path="/contact" component={ContactPage} />
       <Route component={NotFound} />
     </Switch>
   );

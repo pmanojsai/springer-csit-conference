@@ -38,7 +38,7 @@ export function Navbar() {
     { name: "Call for Papers", href: "/call-for-papers" },
     { name: "Committees", href: "/committee" },
     { name: "Dates", href: "/dates" },
-    { name: "Contact", id: "contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -69,29 +69,16 @@ export function Navbar() {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            link.href ? (
-              <Link key={link.name} href={link.href}>
-                <a
-                  className={cn(
-                    "text-sm font-medium transition-colors hover:text-primary",
-                    scrolled ? "text-foreground/80" : "text-white/90 hover:text-white"
-                  )}
-                >
-                  {link.name}
-                </a>
-              </Link>
-            ) : (
-              <button
-                key={link.name}
-                onClick={() => scrollToSection(link.id!)}
+            <Link key={link.name} href={link.href}>
+              <a
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-primary",
                   scrolled ? "text-foreground/80" : "text-white/90 hover:text-white"
                 )}
               >
                 {link.name}
-              </button>
-            )
+              </a>
+            </Link>
           ))}
           <Button 
             onClick={() => window.location.href = '/registration'}
@@ -115,23 +102,13 @@ export function Navbar() {
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-white border-b shadow-lg md:hidden flex flex-col p-4 animate-in slide-in-from-top-5">
           {navLinks.map((link) => (
-            link.href ? (
-              <Link key={link.name} href={link.href}>
-                <a
-                  className="py-3 text-left font-medium text-foreground/80 hover:text-primary border-b border-dashed border-border/50 last:border-0"
-                >
-                  {link.name}
-                </a>
-              </Link>
-            ) : (
-              <button
-                key={link.name}
-                onClick={() => scrollToSection(link.id!)}
+            <Link key={link.name} href={link.href} onClick={() => setIsOpen(false)}>
+              <a
                 className="py-3 text-left font-medium text-foreground/80 hover:text-primary border-b border-dashed border-border/50 last:border-0"
               >
                 {link.name}
-              </button>
-            )
+              </a>
+            </Link>
           ))}
           <Button className="mt-4 w-full" onClick={() => window.location.href = '/registration'}>
             Register Now

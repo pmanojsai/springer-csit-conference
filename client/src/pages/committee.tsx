@@ -18,337 +18,205 @@ import {
   Phone
 } from "lucide-react";
 
-export default function CommitteePage() {
-  // Committee data
-  const chiefPatrons = [
-    {
-      name: "Dr. K. Satyanarayana",
-      designation: "President",
-      affiliation: "KL University",
-      image: "https://randomuser.me/api/portraits/men/65.jpg"
-    },
-    {
-      name: "Dr. G. Pardha Saradhi",
-      designation: "Vice-Chancellor",
-      affiliation: "KL University", 
-      image: "https://randomuser.me/api/portraits/men/62.jpg"
-    }
-  ];
+// ── Real data ──────────────────────────────────────────────────────────────
+const chiefPatrons = [
+  { name: "Dr. K. Satyanarayana", designation: "President", affiliation: "KL University" },
+  { name: "Dr. G. Pardha Saradhi", designation: "Vice-Chancellor", affiliation: "KL University" },
+];
 
-  const coPatrons = [
-    {
-      name: "Dr. L. S. S. Reddy",
-      designation: "Pro Vice-Chancellor",
-      affiliation: "KL University",
-      image: "https://randomuser.me/api/portraits/men/58.jpg"
-    },
-    {
-      name: "Dr. G. R. C. Reddy",
-      designation: "Registrar",
-      affiliation: "KL University",
-      image: "https://randomuser.me/api/portraits/men/71.jpg"
-    }
-  ];
+const coPatrons = [
+  { name: "Dr. L. S. S. Reddy", designation: "Pro Vice-Chancellor", affiliation: "KL University" },
+  { name: "Dr. G. R. C. Reddy", designation: "Registrar", affiliation: "KL University" },
+];
 
-  const generalChairs = [
-    {
-      name: "Dr. V. Krishna",
-      designation: "Professor",
-      affiliation: "Department of CSE, KL University",
-      image: "https://randomuser.me/api/portraits/men/45.jpg",
-      email: "krishna@kluniversity.in"
-    },
-    {
-      name: "Dr. A. Rama Mohan Reddy",
-      designation: "Professor & Dean",
-      affiliation: "School of Computer Science, KL University",
-      image: "https://randomuser.me/api/portraits/men/52.jpg",
-      email: "ramamohan@kluniversity.in"
-    }
-  ];
+const generalChairs = [
+  { name: "Dr. V. Krishna", designation: "Professor", affiliation: "Department of CSE, KL University", email: "krishna@kluniversity.in" },
+  { name: "Dr. A. Rama Mohan Reddy", designation: "Professor & Dean", affiliation: "School of Computer Science, KL University", email: "ramamohan@kluniversity.in" },
+];
 
-  const convener = [
-    {
-      name: "Dr. P. Suresh",
-      designation: "Associate Professor",
-      affiliation: "Department of CSE, KL University",
-      image: "https://randomuser.me/api/portraits/men/38.jpg",
-      email: "suresh@kluniversity.in",
-      phone: "+91 98765 43210"
-    }
-  ];
+const convener = [
+  { name: "Dr. P. Suresh", designation: "Associate Professor", affiliation: "Department of CSE, KL University", email: "suresh@kluniversity.in", phone: "+91 98765 43210" },
+];
 
-  const coConvener = [
-    {
-      name: "Dr. K. Divya",
-      designation: "Assistant Professor",
-      affiliation: "Department of CSE, KL University",
-      image: "https://randomuser.me/api/portraits/women/35.jpg",
-      email: "divya@kluniversity.in"
-    }
-  ];
+const coConvener = [
+  { name: "Dr. K. Divya", designation: "Assistant Professor", affiliation: "Department of CSE, KL University", email: "divya@kluniversity.in" },
+];
 
-  const steeringCommittee = [
-    {
-      name: "Dr. R. C. Tripathi",
-      designation: "Professor",
-      affiliation: "IIT Kanpur",
-      image: "https://randomuser.me/api/portraits/men/68.jpg"
-    },
-    {
-      name: "Dr. S. K. Pal",
-      designation: "Professor",
-      affiliation: "IISc Bangalore",
-      image: "https://randomuser.me/api/portraits/men/72.jpg"
-    },
-    {
-      name: "Dr. P. K. Bhatia",
-      designation: "Professor",
-      affiliation: "NSIT Delhi",
-      image: "https://randomuser.me/api/portraits/men/55.jpg"
-    },
-    {
-      name: "Dr. M. N. Rao",
-      designation: "Professor",
-      affiliation: "JNTU Hyderabad",
-      image: "https://randomuser.me/api/portraits/men/48.jpg"
-    }
-  ];
+const steeringCommittee = [
+  { name: "Dr. R. C. Tripathi", designation: "Professor", affiliation: "IIT Kanpur" },
+  { name: "Dr. S. K. Pal",      designation: "Professor", affiliation: "IISc Bangalore" },
+  { name: "Dr. P. K. Bhatia",   designation: "Professor", affiliation: "NSIT Delhi" },
+  { name: "Dr. M. N. Rao",      designation: "Professor", affiliation: "JNTU Hyderabad" },
+];
 
-  const organizingCommittee = [
-    {
-      name: "Dr. K. V. S. N. R. Raju",
-      designation: "Associate Professor",
-      affiliation: "KL University",
-      image: "https://randomuser.me/api/portraits/men/42.jpg"
-    },
-    {
-      name: "Dr. T. Ramesh",
-      designation: "Associate Professor",
-      affiliation: "KL University",
-      image: "https://randomuser.me/api/portraits/men/50.jpg"
-    },
-    {
-      name: "Dr. S. Lakshmi",
-      designation: "Assistant Professor",
-      affiliation: "KL University",
-      image: "https://randomuser.me/api/portraits/women/28.jpg"
-    },
-    {
-      name: "Dr. M. Srinivas",
-      designation: "Assistant Professor",
-      affiliation: "KL University",
-      image: "https://randomuser.me/api/portraits/men/36.jpg"
-    },
-    {
-      name: "Dr. P. Anusha",
-      designation: "Assistant Professor",
-      affiliation: "KL University",
-      image: "https://randomuser.me/api/portraits/women/32.jpg"
-    },
-    {
-      name: "Dr. K. Chandrasekhar",
-      designation: "Assistant Professor",
-      affiliation: "KL University",
-      image: "https://randomuser.me/api/portraits/men/40.jpg"
-    }
-  ];
+const organizingCommittee = [
+  { name: "Dr. K. V. S. N. R. Raju", designation: "Associate Professor", affiliation: "KL University" },
+  { name: "Dr. T. Ramesh",           designation: "Associate Professor", affiliation: "KL University" },
+  { name: "Dr. S. Lakshmi",          designation: "Assistant Professor", affiliation: "KL University" },
+  { name: "Dr. M. Srinivas",         designation: "Assistant Professor", affiliation: "KL University" },
+  { name: "Dr. P. Anusha",           designation: "Assistant Professor", affiliation: "KL University" },
+  { name: "Dr. K. Chandrasekhar",    designation: "Assistant Professor", affiliation: "KL University" },
+];
 
-  const internationalTechnicalAdvisoryCommittee = [
-    {
-      name: "Dr. J. Smith",
-      designation: "Professor",
-      affiliation: "Stanford University, USA",
-      image: "https://randomuser.me/api/portraits/women/44.jpg"
-    },
-    {
-      name: "Dr. M. Johnson",
-      designation: "Professor",
-      affiliation: "MIT, USA",
-      image: "https://randomuser.me/api/portraits/men/60.jpg"
-    },
-    {
-      name: "Dr. A. Kumar",
-      designation: "Professor",
-      affiliation: "University of Cambridge, UK",
-      image: "https://randomuser.me/api/portraits/men/54.jpg"
-    },
-    {
-      name: "Dr. L. Wang",
-      designation: "Professor",
-      affiliation: "National University of Singapore",
-      image: "https://randomuser.me/api/portraits/women/38.jpg"
-    },
-    {
-      name: "Dr. H. Tanaka",
-      designation: "Professor",
-      affiliation: "University of Tokyo, Japan",
-      image: "https://randomuser.me/api/portraits/men/46.jpg"
-    },
-    {
-      name: "Dr. S. Mueller",
-      designation: "Professor",
-      affiliation: "Technical University of Munich, Germany",
-      image: "https://randomuser.me/api/portraits/men/56.jpg"
-    }
-  ];
+const internationalTAC = [
+  { name: "Dr. Suresh Merugu",  designation: "Assistant Professor, FHEA",              affiliation: "University of Southampton Malaysia" },
+  { name: "Lydia Ray",          designation: "Professor, Computer Sciences",            affiliation: "Columbus State University, Georgia, USA",            email: "ray_lydia@columbusstate.edu" },
+  { name: "Osvaldo Gervasi",    designation: "Professor",                               affiliation: "University of Perugia, Italy",                        email: "osvaldo.gervasi@unipg.it" },
+  { name: "Haiming Liu",        designation: "Professor, Computer Science",             affiliation: "University of Southampton, UK",                       email: "h.liu@soton.ac.uk" },
+  { name: "Dr. Obsagilo",       designation: "Assistant Professor, School of CS",       affiliation: "Wolleg University, Institute of Technology, Ethiopia" },
+  { name: "Dr. Etana Fikadu",   designation: "Assistant Professor, Computer Science",   affiliation: "Wolleg University, Institute of Technology, Ethiopia" },
+  { name: "Dr. Bilal Ahmed",    designation: "Professor",                               affiliation: "Yaman University" },
+];
 
-  const nationalTechnicalAdvisoryCommittee = [
-    {
-      name: "Dr. R. Sharma",
-      designation: "Professor",
-      affiliation: "IIT Bombay",
-      image: "https://randomuser.me/api/portraits/men/63.jpg"
-    },
-    {
-      name: "Dr. S. Gupta",
-      designation: "Professor",
-      affiliation: "IIT Delhi",
-      image: "https://randomuser.me/api/portraits/men/49.jpg"
-    },
-    {
-      name: "Dr. P. Reddy",
-      designation: "Professor",
-      affiliation: "IIT Madras",
-      image: "https://randomuser.me/api/portraits/men/53.jpg"
-    },
-    {
-      name: "Dr. A. Patel",
-      designation: "Professor",
-      affiliation: "IIT Kharagpur",
-      image: "https://randomuser.me/api/portraits/women/41.jpg"
-    },
-    {
-      name: "Dr. K. Singh",
-      designation: "Professor",
-      affiliation: "NIT Warangal",
-      image: "https://randomuser.me/api/portraits/men/47.jpg"
-    },
-    {
-      name: "Dr. M. Nair",
-      designation: "Professor",
-      affiliation: "NIT Trichy",
-      image: "https://randomuser.me/api/portraits/women/36.jpg"
-    },
-    {
-      name: "Dr. V. Kumar",
-      designation: "Professor",
-      affiliation: "IIIT Hyderabad",
-      image: "https://randomuser.me/api/portraits/men/51.jpg"
-    },
-    {
-      name: "Dr. T. Rao",
-      designation: "Professor",
-      affiliation: "University of Hyderabad",
-      image: "https://randomuser.me/api/portraits/men/59.jpg"
-    }
-  ];
+const nationalTAC = [
+  { name: "Dr. Aditya Kumar Sahu",    designation: "Faculty, CSE",                     affiliation: "SRM-AP University" },
+  { name: "Atul Negi",                designation: "Professor, SCIS",                  affiliation: "University of Hyderabad, India" },
+  { name: "Dr. Ramesh Vatambeti",     designation: "Professor, CSE",                   affiliation: "Tezpur University (A Central University), Assam",      email: "rameshv@tezu.ernet.in",         phone: "+91 7729992929" },
+  { name: "Dr. Koteswararao CH",      designation: "Associate Professor, IT Engg.",    affiliation: "Guru Ghasidas Vishwavidyalaya, Bilaspur (C.G)",        email: "koteswara.raoch@ggu.ac.in",     phone: "+91 9959946303" },
+  { name: "Dr. Annappa",              designation: "Professor",                         affiliation: "NIT Surathkal" },
+  { name: "Dr. Sureindran",           designation: "Professor",                         affiliation: "NIT Puducherry" },
+  { name: "Dr. Saroj Kumar Biswas",   designation: "Professor",                         affiliation: "NIT Silchar" },
+  { name: "Dr. Prabhu Mohandass",     designation: "Professor",                         affiliation: "NIT Calicut" },
+  { name: "Dr. AnandaKumar",          designation: "Professor",                         affiliation: "NIT Surathkal" },
+  { name: "Dr. Pranesh Das",          designation: "Professor",                         affiliation: "NIT Calicut" },
+  { name: "Dr. Jayakumar Loganthan",  designation: "Professor",                         affiliation: "NIT Agartala" },
+  { name: "Dr. Mrinal Kanti Debbarma",designation: "Professor",                         affiliation: "NIT Agartala" },
+  { name: "Dr. Jagadeesh M S",        designation: "Associate Professor, CSE",          affiliation: "NITTTR Kolkata",                                      email: "jagadeesh@nitttrkol.ac.in",     phone: "+91 9247880488" },
+  { name: "Dr. Vijay Bhaskar Semwal", designation: "Assistant Professor Grade-1",       affiliation: "MANIT Bhopal",                                        email: "vsemwal@manit.ac.in" },
+  { name: "Dr. Vaibhav Soni",         designation: "Assistant Professor",               affiliation: "MANIT Bhopal",                                        email: "vaibhavsoni@manit.ac.in" },
+  { name: "Shridhar Sanshi",          designation: "Faculty, CSE",                      affiliation: "NIT Surathkal" },
+  { name: "Dr. S. Ganapathy",         designation: "Associate Professor, CSE",          affiliation: "NITTTR Bhopal" },
+  { name: "Rajib Ghosh",              designation: "Faculty, CSE",                      affiliation: "NIT Patna",                                           email: "rajib.ghosh@nitp.ac.in" },
+];
 
-  const CommitteeMemberCard = ({ member, showContact = false }: { member: any; showContact?: boolean }) => (
+// ── Helper to generate initials avatar ────────────────────────────────────
+function getInitials(name: string) {
+  return name
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((n) => n[0].toUpperCase())
+    .join("");
+}
+
+// ── Card ──────────────────────────────────────────────────────────────────
+interface Member {
+  name: string;
+  designation: string;
+  affiliation: string;
+  image?: string;
+  email?: string;
+  phone?: string;
+}
+
+function CommitteeMemberCard({ member, showContact = false }: { member: Member; showContact?: boolean }) {
+  return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="bg-white border border-slate-200 rounded-xl p-6 hover:border-primary/30 transition-all duration-300 hover:shadow-lg flex flex-col h-full"
+      className="bg-white border border-slate-200 rounded-xl p-5 hover:border-primary/30 transition-all duration-300 hover:shadow-lg flex flex-col h-full"
     >
-      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-4 text-center sm:text-left">
-        <div className="w-16 h-16 shrink-0 rounded-full overflow-hidden border-2 border-primary/20">
-          <img 
-            src={member.image} 
-            alt={member.name}
-            className="w-full h-full object-cover"
-          />
+      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-3 text-center sm:text-left">
+        {/* Avatar — initials-based since no photos available */}
+        <div className="w-14 h-14 shrink-0 rounded-full bg-gradient-to-br from-primary/20 to-blue-500/20 border-2 border-primary/20 flex items-center justify-center">
+          <span className="text-primary font-bold text-lg">{getInitials(member.name)}</span>
         </div>
-        <div className="flex-1">
-          <h4 className="font-semibold text-slate-900 text-lg">{member.name}</h4>
-          <p className="text-primary font-medium text-sm">{member.designation}</p>
-          <p className="text-slate-600 text-sm">{member.affiliation}</p>
+        <div className="flex-1 min-w-0">
+          <h4 className="font-semibold text-slate-900 text-base leading-tight">{member.name}</h4>
+          <p className="text-primary font-medium text-sm mt-0.5">{member.designation}</p>
+          <p className="text-slate-500 text-sm mt-0.5 leading-snug">{member.affiliation}</p>
         </div>
       </div>
-      {showContact && (
-        <div className="space-y-2 text-sm mt-auto pt-4 border-t border-slate-100">
+
+      {showContact && (member.email || member.phone) && (
+        <div className="space-y-1.5 text-sm mt-auto pt-3 border-t border-slate-100">
           {member.email && (
-            <div className="flex items-center justify-center sm:justify-start gap-2 text-slate-600 break-all sm:break-normal">
-              <Mail className="w-4 h-4 shrink-0" />
-              <span>{member.email}</span>
-            </div>
+            <a
+              href={`mailto:${member.email}`}
+              className="flex items-center justify-center sm:justify-start gap-2 text-slate-500 hover:text-primary transition-colors break-all sm:break-normal"
+            >
+              <Mail className="w-3.5 h-3.5 shrink-0" />
+              <span className="text-xs">{member.email}</span>
+            </a>
           )}
           {member.phone && (
-            <div className="flex items-center justify-center sm:justify-start gap-2 text-slate-600">
-              <Phone className="w-4 h-4 shrink-0" />
-              <span>{member.phone}</span>
+            <div className="flex items-center justify-center sm:justify-start gap-2 text-slate-500">
+              <Phone className="w-3.5 h-3.5 shrink-0" />
+              <span className="text-xs">{member.phone}</span>
             </div>
           )}
         </div>
       )}
     </motion.div>
   );
+}
 
-  const CommitteeSection = ({ 
-    title, 
-    members, 
-    icon, 
-    showContact = false,
-    description 
-  }: { 
-    title: string; 
-    members: any[]; 
-    icon: React.ReactNode;
-    showContact?: boolean;
-    description?: string;
-  }) => (
-    <section className="py-16 bg-white">
+// ── Section wrapper ────────────────────────────────────────────────────────
+interface CommitteeSectionProps {
+  title: string;
+  members: Member[];
+  icon: React.ReactNode;
+  showContact?: boolean;
+  description?: string;
+  bg?: string;
+}
+
+function CommitteeSection({ title, members, icon, showContact = false, description, bg = "bg-white" }: CommitteeSectionProps) {
+  const cols =
+    members.length === 1 ? "grid-cols-1 max-w-sm mx-auto"
+    : members.length === 2 ? "grid-cols-1 sm:grid-cols-2 max-w-2xl mx-auto"
+    : members.length <= 4 ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-2"
+    : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
+
+  return (
+    <section className={`py-16 ${bg}`}>
       <div className="container px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
+          transition={{ duration: 0.7 }}
+          className="text-center mb-10"
         >
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
               {icon}
             </div>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900">
-              {title}
-            </h2>
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-slate-900">{title}</h2>
           </div>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-blue-500 mx-auto mb-6 rounded-full"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-blue-500 mx-auto mb-4 rounded-full" />
           {description && (
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              {description}
-            </p>
+            <p className="text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">{description}</p>
           )}
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className={`grid gap-5 ${cols}`}>
           {members.map((member, idx) => (
-            <CommitteeMemberCard 
-              key={idx} 
-              member={member} 
-              showContact={showContact}
-            />
+            <CommitteeMemberCard key={idx} member={member} showContact={showContact} />
           ))}
         </div>
       </div>
     </section>
   );
+}
 
+// ── Page ───────────────────────────────────────────────────────────────────
+export default function CommitteePage() {
   return (
     <div className="min-h-screen bg-background font-sans text-foreground selection:bg-primary/20 selection:text-primary">
       <Navbar />
-      
+
       <main>
-        {/* Hero Section */}
-        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden" style={starryBackground}>
-          <div className={cn("absolute inset-0", starryOverlay)}></div>
+        {/* Hero */}
+        <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden" style={starryBackground}>
+          <div className={cn("absolute inset-0", starryOverlay)} />
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-[40%] -left-[40%] w-[80%] h-[80%] rounded-full bg-primary/10 blur-3xl"></div>
-            <div className="absolute -bottom-[30%] -right-[30%] w-[60%] h-[60%] rounded-full bg-blue-500/10 blur-3xl"></div>
+            <div className="absolute -top-[40%] -left-[40%] w-[80%] h-[80%] rounded-full bg-primary/10 blur-3xl" />
+            <div className="absolute -bottom-[30%] -right-[30%] w-[60%] h-[60%] rounded-full bg-blue-500/10 blur-3xl" />
           </div>
-          
+
           <div className="container relative z-10 px-4 pt-20">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -360,13 +228,13 @@ export default function CommitteePage() {
                 <Users className="w-4 h-4" />
                 <span className="text-xs font-medium tracking-wide uppercase">Leadership Team</span>
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6 tracking-tight">
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-white/80">
                   Committee Members
                 </span>
               </h1>
-              
+
               <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
                 Meet the distinguished leaders and experts organizing AICDF 2026
               </p>
@@ -374,122 +242,67 @@ export default function CommitteePage() {
           </div>
         </section>
 
-        {/* Chief Patrons */}
-        <CommitteeSection 
-          title="Chief Patrons"
-          members={chiefPatrons}
-          icon={<Crown className="w-6 h-6" />}
-          description="The visionary leaders guiding the conference with their expertise and experience"
-        />
+        {/* Committees */}
+        <CommitteeSection title="Chief Patrons"  members={chiefPatrons}         icon={<Crown className="w-5 h-5" />}       description="The visionary leaders guiding the conference" />
+        <CommitteeSection title="Co-Patrons"     members={coPatrons}            icon={<Star className="w-5 h-5" />}        description="Supporting the conference mission with their leadership" bg="bg-slate-50" />
+        <CommitteeSection title="General Chairs" members={generalChairs}        icon={<Award className="w-5 h-5" />}       description="Leading the conference organization and academic oversight" showContact />
+        <CommitteeSection title="Convener"       members={convener}             icon={<UserCheck className="w-5 h-5" />}   description="Coordinating all conference activities and operations" showContact bg="bg-slate-50" />
+        <CommitteeSection title="Co-Convener"    members={coConvener}           icon={<UserCheck className="w-5 h-5" />}   description="Assisting in conference coordination and management" showContact />
+        <CommitteeSection title="Steering Committee" members={steeringCommittee} icon={<Shield className="w-5 h-5" />}    description="Providing strategic direction and academic guidance" bg="bg-slate-50" />
+        <CommitteeSection title="Organizing Committee" members={organizingCommittee} icon={<Briefcase className="w-5 h-5" />} description="Dedicated team working behind the scenes" />
 
-        {/* Co-Patrons */}
-        <CommitteeSection 
-          title="Co-Patrons"
-          members={coPatrons}
-          icon={<Star className="w-6 h-6" />}
-          description="Supporting the conference mission with their leadership and guidance"
-        />
-
-        {/* General Chairs */}
-        <CommitteeSection 
-          title="General Chairs"
-          members={generalChairs}
-          icon={<Award className="w-6 h-6" />}
-          showContact={true}
-          description="Leading the conference organization and academic oversight"
-        />
-
-        {/* Convener */}
-        <CommitteeSection 
-          title="Convener"
-          members={convener}
-          icon={<UserCheck className="w-6 h-6" />}
-          showContact={true}
-          description="Coordinating all conference activities and operations"
-        />
-
-        {/* Co-Convener */}
-        <CommitteeSection 
-          title="Co-Convener"
-          members={coConvener}
-          icon={<UserCheck className="w-6 h-6" />}
-          showContact={true}
-          description="Assisting in conference coordination and management"
-        />
-
-        {/* Steering Committee */}
-        <CommitteeSection 
-          title="Steering Committee"
-          members={steeringCommittee}
-          icon={<Shield className="w-6 h-6" />}
-          description="Providing strategic direction and academic guidance for the conference"
-        />
-
-        {/* Organizing Committee */}
-        <CommitteeSection 
-          title="Organizing Committee"
-          members={organizingCommittee}
-          icon={<Briefcase className="w-6 h-6" />}
-          description="Dedicated team working behind the scenes to make the conference successful"
-        />
-
-        {/* International Technical Advisory Committee */}
-        <CommitteeSection 
+        {/* International TAC */}
+        <CommitteeSection
           title="International Technical Advisory Committee"
-          members={internationalTechnicalAdvisoryCommittee}
-          icon={<Globe className="w-6 h-6" />}
+          members={internationalTAC}
+          icon={<Globe className="w-5 h-5" />}
           description="Global experts providing technical guidance and ensuring international standards"
+          showContact
+          bg="bg-slate-50"
         />
 
-        {/* National Technical Advisory Committee */}
-        <CommitteeSection 
+        {/* National TAC */}
+        <CommitteeSection
           title="National Technical Advisory Committee"
-          members={nationalTechnicalAdvisoryCommittee}
-          icon={<GraduationCap className="w-6 h-6" />}
+          members={nationalTAC}
+          icon={<GraduationCap className="w-5 h-5" />}
           description="Leading academicians from premier institutions across India"
+          showContact
         />
 
-        {/* Contact CTA */}
-        <section className="py-16" style={starryBackground}>
-          <div className={cn("absolute inset-0", starryOverlay)}></div>
-          <div className="relative z-10">
-            <div className="container px-4 mx-auto text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className="text-3xl font-bold text-white mb-4">
-                  Get in Touch with the Committee
-                </h2>
-                <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                  For any queries or information about AICDF 2026, please feel free to contact our committee members
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button
-                    onClick={() => {
-                      window.location.href = '/#contact';
-                    }}
-                    className="px-6 py-3 bg-gradient-to-r from-primary to-blue-600 text-white font-medium rounded-lg hover:opacity-90 transition-opacity"
-                  >
-                    Contact Committee
-                  </button>
-                  <button
-                    onClick={() => {
-                      window.location.href = '/registration';
-                    }}
-                    className="px-6 py-3 bg-white/10 text-white font-medium rounded-lg hover:bg-white/20 transition-colors border border-white/10"
-                  >
-                    Register for Conference
-                  </button>
-                </div>
-              </motion.div>
-            </div>
+        {/* CTA */}
+        <section className="relative py-16 overflow-hidden" style={starryBackground}>
+          <div className={cn("absolute inset-0", starryOverlay)} />
+          <div className="relative z-10 container px-4 mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl font-bold text-white mb-4">Get in Touch with the Committee</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                For any queries about AICDF 2026, please feel free to contact our committee members
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={() => { window.location.href = '/contact'; }}
+                  className="px-6 py-3 bg-gradient-to-r from-primary to-blue-600 text-white font-medium rounded-lg hover:opacity-90 transition-opacity"
+                >
+                  Contact Committee
+                </button>
+                <button
+                  onClick={() => { window.location.href = '/registration'; }}
+                  className="px-6 py-3 bg-white/10 text-white font-medium rounded-lg hover:bg-white/20 transition-colors border border-white/10"
+                >
+                  Register for Conference
+                </button>
+              </div>
+            </motion.div>
           </div>
         </section>
       </main>
-      
+
       <Footer />
       <ScrollToTop />
     </div>
