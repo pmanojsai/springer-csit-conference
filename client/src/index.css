@@ -38,7 +38,7 @@
 
 @layer base {
   :root {
-    /* IEEE Red: #D0021B -> HSL approx 353 98% 41% */
+    /* Primary Red: #D0021B -> HSL approx 353 98% 41% */
     --primary: 353 98% 41%; 
     --primary-foreground: 0 0% 100%;
 

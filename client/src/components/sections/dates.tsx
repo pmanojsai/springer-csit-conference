@@ -1,48 +1,113 @@
+import { motion } from "framer-motion";
 import data from "@/data/conference.json";
-import { CalendarDays } from "lucide-react";
+import { CalendarDays, Clock, AlertCircle, CheckCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { starryBackground, starryOverlay } from "@/styles/theme";
 
 export function Dates() {
+  const getStatusIcon = (status: string) => {
+    switch(status.toLowerCase()) {
+      case 'upcoming':
+        return <Clock className="w-4 h-4 text-yellow-500" />;
+      case 'ongoing':
+        return <AlertCircle className="w-4 h-4 text-blue-500" />;
+      case 'completed':
+        return <CheckCircle className="w-4 h-4 text-green-500" />;
+      default:
+        return <CalendarDays className="w-4 h-4 text-primary" />;
+    }
+  };
+
   return (
-    <section id="dates" className="py-24 bg-slate-900 text-white">
-      <div className="container px-4 mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-primary font-bold uppercase tracking-widest text-sm mb-2">Schedule</h2>
-          <h3 className="text-3xl font-heading font-bold text-white">Important Dates</h3>
-        </div>
+    <section id="dates" className="relative overflow-hidden py-24" style={starryBackground}>
+      <div className={cn("absolute inset-0", starryOverlay)}></div>
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-[40%] -left-[40%] w-[80%] h-[80%] rounded-full bg-primary/10 blur-3xl"></div>
+        <div className="absolute -bottom-[30%] -right-[30%] w-[60%] h-[60%] rounded-full bg-blue-500/10 blur-3xl"></div>
+      </div>
+      
+      <div className="relative z-10">
+        <div className="container px-4 mx-auto">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider text-primary uppercase bg-primary/10 rounded-full mb-4">
+              Conference Timeline
+            </span>
+            <h2 className="text-4xl font-heading font-bold text-white mb-4">Important Dates</h2>
+            <div className="w-16 h-1 bg-gradient-to-r from-primary to-blue-500 mx-auto mb-8 rounded-full"></div>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Mark your calendars for these key dates and deadlines for AICDF 2026
+            </p>
+          </div>
 
-        <div className="relative max-w-4xl mx-auto">
-          {/* Vertical Line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/20 -translate-x-1/2 hidden md:block" />
-
-          <div className="space-y-12">
-            {data.importantDates.map((item, idx) => (
-              <div key={idx} className={cn(
-                "relative flex items-center justify-between md:justify-center gap-8",
-                idx % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
-              )}>
-                {/* Date Bubble */}
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary border-4 border-slate-900 z-10 hidden md:block" />
-
-                <div className="w-full md:w-[45%]">
-                  <div className={cn(
-                    "bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-xl hover:bg-white/10 transition-colors",
-                    idx % 2 === 0 ? "text-left" : "md:text-right text-left"
-                  )}>
-                    <div className={cn(
-                      "flex items-center gap-3 mb-2",
-                      idx % 2 === 0 ? "justify-start" : "md:justify-end justify-start"
-                    )}>
-                      <CalendarDays className="w-5 h-5 text-primary" />
-                      <span className="font-bold text-lg text-primary">{item.date}</span>
-                    </div>
-                    <h4 className="text-xl font-heading font-medium text-white">{item.label}</h4>
-                  </div>
-                </div>
+          <div className="relative max-w-4xl mx-auto">
+            {/* Vertical Timeline Line */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/20 via-primary/50 to-primary/20 -translate-x-1/2"></div>
+            
+            <div className="space-y-12">
+              {data.importantDates.map((item, idx) => {
+                const isEven = idx % 2 === 0;
+                const status = (item as any).status || 'upcoming';
                 
-                <div className="hidden md:block w-full md:w-[45%]" />
-              </div>
-            ))}
+                return (
+                  <motion.div 
+                    key={idx}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    className={cn(
+                      "relative flex flex-col md:flex-row",
+                      isEven ? "md:flex-row-reverse" : "md:flex-row"
+                    )}
+                  >
+                    {/* Timeline Dot */}
+                    <div className="absolute left-1/2 -translate-x-1/2 top-6 w-6 h-6 flex items-center justify-center rounded-full bg-slate-900 border-4 border-primary z-10">
+                      {getStatusIcon(status)}
+                    </div>
+                    
+                    {/* Empty space for alignment */}
+                    <div className={cn("hidden md:block", isEven ? "md:w-1/2" : "md:w-1/2")}></div>
+                    
+                    {/* Date Card */}
+                    <div className={cn(
+                      "w-full md:w-5/12 bg-gradient-to-br from-slate-800/50 to-slate-900/80 backdrop-blur-sm p-6 rounded-xl border border-white/5 transition-all hover:border-primary/30",
+                      isEven ? "md:mr-auto md:pr-10" : "md:ml-auto md:pl-10"
+                    )}>
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                          <CalendarDays className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <div className="text-sm font-medium text-primary">{item.date}</div>
+                          <div className="text-xs text-gray-400 flex items-center gap-1">
+                            {getStatusIcon(status)}
+                            <span className="capitalize">{status}</span>
+                          </div>
+                        </div>
+                      </div>
+                      <h4 className="text-lg font-semibold text-white mb-2">{item.label}</h4>
+                      {(item as any).description && (
+                        <p className="text-sm text-gray-300">{(item as any).description}</p>
+                      )}
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-20 text-center">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-primary/10 to-blue-500/10 backdrop-blur-sm rounded-full border border-white/5">
+              <Clock className="w-5 h-5 text-primary" />
+              <span className="text-sm font-medium text-gray-300">
+                All times are in <span className="text-white">IST (UTC+5:30)</span>
+              </span>
+            </div>
+            <p className="mt-6 text-gray-400">
+              Need more information about the schedule?{' '}
+              <a href="#contact" className="text-primary hover:underline">Contact us</a>
+            </p>
           </div>
         </div>
       </div>

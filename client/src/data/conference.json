@@ -5,16 +5,16 @@
     "theme": "Artificial Intelligence, Data Science, Cyber Forensics",
     "mode": "Hybrid (In-person + Virtual)",
     "frequency": "Annual",
-    "organizer": "IEEE – KL University",
+    "organizer": "KL University",
     "dates": "October 24-26, 2026",
-    "location": "KL University, Vijayawada, India"
+    "location": "KL University, Bachupally, Hyderabad"
   },
   "hero": {
     "tagline": "Advancing the Frontiers of Secure Intelligence",
     "keyInfo": [
       "Hybrid Event",
       "Annual Conference",
-      "IEEE Publication",
+      "Conference Publication",
       "Global Participants"
     ]
   },
@@ -22,25 +22,63 @@
     "mission": "To foster innovation and collaboration at the intersection of AI, Cyber Security, and Digital Forensics.",
     "overview": "AICDF 2026 brings together leading academicians, scientists, researchers, and scholars to exchange and share their experiences and research results on all aspects of Artificial Intelligence, Cyber Security, and Digital Forensics. It provides a premier interdisciplinary platform to present and discuss the most recent innovations, trends, and concerns as well as practical challenges encountered and solutions adopted in these fields.",
     "focusAreas": [
-      "Machine Learning & Deep Learning",
+      "Artificial Intelligence and Machine Learning",
       "Network Security & Cryptography",
       "Digital Forensics & Incident Response",
-      "Big Data Analytics & Privacy"
+      "Big Data Analytics & Privacy",
+      "Blockchain & Web3",
+      "Quantum Computing"
     ]
   },
   "advisoryBoard": [
-    { "name": "Dr. A. Sharma", "affiliation": "IIT Bombay", "role": "Professor, CSE" },
-    { "name": "Dr. J. Smith", "affiliation": "Stanford University", "role": "Director, AI Lab" },
-    { "name": "Dr. K. Rao", "affiliation": "NIT Warangal", "role": "Dean, Research" },
-    { "name": "Dr. L. Zhang", "affiliation": "NUS Singapore", "role": "Assoc. Professor" },
-    { "name": "Dr. P. Gupta", "affiliation": "IIIT Hyderabad", "role": "Chair, Cyber Security" },
-    { "name": "Dr. R. Williams", "affiliation": "MIT", "role": "Senior Researcher" }
+    { 
+      "name": "Dr. A. Sharma", 
+      "affiliation": "IIT Bombay", 
+      "role": "Professor, CSE",
+      "image": "https://randomuser.me/api/portraits/men/32.jpg",
+      "linkedin": "https://linkedin.com/in/example1"
+    },
+    { 
+      "name": "Dr. J. Smith", 
+      "affiliation": "Stanford University", 
+      "role": "Director, AI Lab",
+      "image": "https://randomuser.me/api/portraits/women/44.jpg",
+      "linkedin": "https://linkedin.com/in/example2"
+    },
+    { 
+      "name": "Dr. K. Rao", 
+      "affiliation": "NIT Warangal", 
+      "role": "Dean, Research",
+      "image": "https://randomuser.me/api/portraits/men/22.jpg",
+      "linkedin": "https://linkedin.com/in/example3"
+    },
+    { 
+      "name": "Dr. L. Zhang", 
+      "affiliation": "NUS Singapore", 
+      "role": "Assoc. Professor",
+      "image": "https://randomuser.me/api/portraits/women/63.jpg",
+      "linkedin": "https://linkedin.com/in/example4"
+    },
+    { 
+      "name": "Dr. P. Gupta", 
+      "affiliation": "IIIT Hyderabad", 
+      "role": "Chair, Cyber Security",
+      "image": "https://randomuser.me/api/portraits/men/45.jpg",
+      "linkedin": "https://linkedin.com/in/example5"
+    },
+    { 
+      "name": "Dr. R. Williams", 
+      "affiliation": "MIT", 
+      "role": "Senior Researcher",
+      "image": "https://randomuser.me/api/portraits/women/28.jpg",
+      "linkedin": "https://linkedin.com/in/example6"
+    }
   ],
   "organizingCommittee": {
     "patrons": ["Prof. K. Satyanarayana, President, KL University"],
-    "generalChairs": ["Dr. V. Krishna, IEEE Senior Member"],
+    "generalChairs": ["Dr. V. Krishna, Professor"],
     "technicalCoordinators": ["Dr. S. Reddy", "Dr. M. Kumar"],
-    "studentVolunteers": ["Student Branch IEEE - KL University"]
+    "studentVolunteers": ["Student Branch - KL University"]
   },
   "importantDates": [
     { "label": "Paper Submission Deadline", "date": "July 15, 2026" },
@@ -51,7 +89,7 @@
   ],
   "registration": {
     "fees": [
-      { "category": "IEEE Member", "earlyBird": "$300", "regular": "$350", "virtual": "$200" },
+      { "category": "Academic Member", "earlyBird": "$300", "regular": "$350", "virtual": "$200" },
       { "category": "Non-Member", "earlyBird": "$400", "regular": "$450", "virtual": "$250" },
       { "category": "Student", "earlyBird": "$150", "regular": "$200", "virtual": "$100" }
     ]
@@ -59,6 +97,6 @@
   "contact": {
     "email": "contact@aicdf2026.org",
     "phone": "+91 123 456 7890",
-    "address": "KL University, Green Fields, Vaddeswaram, Andhra Pradesh 522502"
+    "address": "KL University, Bachupally, Hyderabad, Telangana 500090"
   }
 }

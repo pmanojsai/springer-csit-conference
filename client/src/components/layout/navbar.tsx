@@ -18,17 +18,26 @@ export function Navbar() {
 
   const scrollToSection = (id: string) => {
     setIsOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    
+    // Check if we're on the home page
+    if (window.location.pathname === '/') {
+      // If on home page, just scroll to the section
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // If on another page, navigate to home page with hash
+      window.location.href = `/#${id}`;
     }
   };
 
   const navLinks = [
-    { name: "About", id: "about" },
-    { name: "Committees", id: "committees" },
-    { name: "Dates", id: "dates" },
-    { name: "Registration", id: "registration" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Call for Papers", href: "/call-for-papers" },
+    { name: "Committees", href: "/committee" },
+    { name: "Dates", href: "/dates" },
     { name: "Contact", id: "contact" },
   ];
 
@@ -41,29 +50,51 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div 
-          className="font-heading font-bold text-2xl tracking-tighter cursor-pointer flex items-center gap-2"
+          className="font-heading font-bold text-2xl tracking-tighter cursor-pointer flex items-center gap-3"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <span className="text-primary">IEEE</span>
-          <span className={cn(scrolled ? "text-foreground" : "text-white")}>AICDF 2026</span>
+          <img 
+            src="/klh.png" 
+            alt="KLH Logo" 
+            className="h-8 w-auto object-contain"
+          />
+          <span className={cn(
+            "text-2xl font-light",
+            scrolled ? "text-foreground/60" : "text-white/60"
+          )}>×</span>
+          <span className="text-primary">AICDF</span>
+          <span className={cn(scrolled ? "text-foreground" : "text-white")}> 2026</span>
         </div>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <button
-              key={link.name}
-              onClick={() => scrollToSection(link.id)}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                scrolled ? "text-foreground/80" : "text-white/90 hover:text-white"
-              )}
-            >
-              {link.name}
-            </button>
+            link.href ? (
+              <Link key={link.name} href={link.href}>
+                <a
+                  className={cn(
+                    "text-sm font-medium transition-colors hover:text-primary",
+                    scrolled ? "text-foreground/80" : "text-white/90 hover:text-white"
+                  )}
+                >
+                  {link.name}
+                </a>
+              </Link>
+            ) : (
+              <button
+                key={link.name}
+                onClick={() => scrollToSection(link.id!)}
+                className={cn(
+                  "text-sm font-medium transition-colors hover:text-primary",
+                  scrolled ? "text-foreground/80" : "text-white/90 hover:text-white"
+                )}
+              >
+                {link.name}
+              </button>
+            )
           ))}
           <Button 
-            onClick={() => scrollToSection("registration")}
+            onClick={() => window.location.href = '/registration'}
             variant={scrolled ? "default" : "secondary"}
             size="sm"
           >
@@ -84,15 +115,25 @@ export function Navbar() {
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-white border-b shadow-lg md:hidden flex flex-col p-4 animate-in slide-in-from-top-5">
           {navLinks.map((link) => (
-            <button
-              key={link.name}
-              onClick={() => scrollToSection(link.id)}
-              className="py-3 text-left font-medium text-foreground/80 hover:text-primary border-b border-dashed border-border/50 last:border-0"
-            >
-              {link.name}
-            </button>
+            link.href ? (
+              <Link key={link.name} href={link.href}>
+                <a
+                  className="py-3 text-left font-medium text-foreground/80 hover:text-primary border-b border-dashed border-border/50 last:border-0"
+                >
+                  {link.name}
+                </a>
+              </Link>
+            ) : (
+              <button
+                key={link.name}
+                onClick={() => scrollToSection(link.id!)}
+                className="py-3 text-left font-medium text-foreground/80 hover:text-primary border-b border-dashed border-border/50 last:border-0"
+              >
+                {link.name}
+              </button>
+            )
           ))}
-          <Button className="mt-4 w-full" onClick={() => scrollToSection("registration")}>
+          <Button className="mt-4 w-full" onClick={() => window.location.href = '/registration'}>
             Register Now
           </Button>
         </div>

@@ -13,26 +13,24 @@ import {
 
 export function Hero() {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900">
+      {/* Background Image with Simple Overlay */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/hero-bg.png')" }}
-      >
-        <div className="absolute inset-0 bg-slate-900/70 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
-      </div>
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-40"
+        style={{ backgroundImage: "url('/klu.avif')" }}
+      />
+      <div className="absolute inset-0 bg-slate-900/60" />
 
       <div className="container relative z-10 px-4 pt-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto text-center text-white"
+          className="max-w-4xl mx-auto text-center text-white relative z-10"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-md mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/30 border border-primary/50 mb-6">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-xs font-medium tracking-wide uppercase">{data.context.organizer}</span>
+            <span className="text-xs font-medium tracking-wide uppercase">KL University</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6 tracking-tight">
@@ -46,40 +44,99 @@ export function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button size="lg" className="text-lg px-8 h-14 bg-primary hover:bg-primary/90 rounded-full" onClick={() => document.getElementById('registration')?.scrollIntoView({behavior: 'smooth'})}>
-              Register Now <ArrowRight className="ml-2 w-5 h-5" />
+            <Button 
+              size="lg" 
+              className="text-lg px-8 h-14 bg-primary hover:bg-primary/90 rounded-full group transition-all duration-300 shadow-lg hover:shadow-primary/30"
+              onClick={() => window.location.href = '/registration'}
+            >
+              Register Now 
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
             <Dialog>
               <DialogTrigger asChild>
-                <Button size="lg" variant="outline" className="text-lg px-8 h-14 bg-white/10 border-white/20 hover:bg-white/20 text-white rounded-full backdrop-blur-sm">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="text-lg px-8 h-14 bg-white/10 border-white/20 hover:bg-white/20 text-white rounded-full backdrop-blur-sm hover:shadow-lg hover:shadow-white/10 transition-all duration-300"
+                >
                   Call for Papers
                 </Button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-[425px]">
+              <DialogContent className="sm:max-w-[600px] bg-slate-900 border-slate-700 text-white">
                 <DialogHeader>
-                  <DialogTitle>Call for Papers</DialogTitle>
-                  <DialogDescription>
-                    Submission guidelines and topics of interest.
+                  <DialogTitle className="text-2xl font-bold text-white">Call for Papers</DialogTitle>
+                  <DialogDescription className="text-slate-300">
+                    Submission guidelines and topics of interest for AICDF 2026
                   </DialogDescription>
                 </DialogHeader>
-                <div className="grid gap-4 py-4">
-                  <p className="text-sm text-slate-500">
-                    We invite original research papers on Artificial Intelligence, Cyber Security, and Digital Forensics.
-                  </p>
-                  <ul className="list-disc list-inside text-sm text-slate-500 space-y-1">
-                    <li>Full Paper Submission Deadline: July 15, 2026</li>
-                    <li>Notification of Acceptance: August 30, 2026</li>
-                  </ul>
-                  <div className="p-4 bg-slate-100 rounded text-xs font-mono text-slate-500 mt-2">
-                    // TODO: Insert Submission Portal Link Here
+                <div className="grid gap-6 py-4">
+                  <div className="space-y-4">
+                    <h3 className="text-lg font-semibold text-primary">Topics of Interest</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {[
+                        'Artificial Intelligence',
+                        'Machine Learning',
+                        'Deep Learning',
+                        'Computer Vision',
+                        'Natural Language Processing',
+                        'Cybersecurity',
+                        'Digital Forensics',
+                        'Blockchain Technology',
+                        'IoT Security',
+                        'Cloud Security',
+                        'Ethical Hacking',
+                        'Data Privacy'
+                      ].map((topic, i) => (
+                        <div key={i} className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                          <span className="text-sm text-slate-300">{topic}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <h3 className="text-lg font-semibold text-primary">Important Dates</h3>
+                    <ul className="space-y-2">
+                      <li className="flex justify-between items-center border-b border-slate-700 pb-2">
+                        <span className="text-slate-300">Paper Submission Deadline</span>
+                        <span className="font-medium">July 15, 2026</span>
+                      </li>
+                      <li className="flex justify-between items-center border-b border-slate-700 pb-2">
+                        <span className="text-slate-300">Notification of Acceptance</span>
+                        <span className="font-medium">August 30, 2026</span>
+                      </li>
+                      <li className="flex justify-between items-center border-b border-slate-700 pb-2">
+                        <span className="text-slate-300">Camera Ready Submission</span>
+                        <span className="font-medium">September 15, 2026</span>
+                      </li>
+                      <li className="flex justify-between items-center">
+                        <span className="text-slate-300">Conference Dates</span>
+                        <span className="font-medium">October 15-17, 2026</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="mt-4">
+                    <a 
+                      href="#" 
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      <span>Submit Paper</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                    <p className="text-xs text-slate-400 mt-2">
+                      Submission portal will open on June 1, 2026
+                    </p>
                   </div>
                 </div>
               </DialogContent>
             </Dialog>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 border-t border-white/10 pt-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 pt-8">
             <div className="flex flex-col items-center gap-2">
               <Globe className="text-primary w-6 h-6" />
               <span className="text-sm font-medium">Hybrid Event</span>
@@ -90,7 +147,7 @@ export function Hero() {
             </div>
             <div className="flex flex-col items-center gap-2">
               <BookOpen className="text-primary w-6 h-6" />
-              <span className="text-sm font-medium">IEEE Publication</span>
+              <span className="text-sm font-medium">Conference Publication</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <Users className="text-primary w-6 h-6" />

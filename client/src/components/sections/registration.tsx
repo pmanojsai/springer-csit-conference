@@ -21,7 +21,7 @@ const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
   email: z.string().email("Invalid email address"),
   affiliation: z.string().min(2, "Affiliation is required"),
-  role: z.enum(["Student", "Professional", "IEEE Member"]),
+  role: z.enum(["Student", "Professional", "Academic Member"]),
   paperTitle: z.string().optional(),
   terms: z.boolean().refine(val => val === true, "You must accept terms"),
 });
@@ -138,7 +138,7 @@ export function Registration() {
                             <SelectContent>
                               <SelectItem value="Student">Student</SelectItem>
                               <SelectItem value="Professional">Professional</SelectItem>
-                              <SelectItem value="IEEE Member">IEEE Member</SelectItem>
+                              <SelectItem value="Academic Member">Academic Member</SelectItem>
                             </SelectContent>
                           </Select>
                           <FormMessage />
