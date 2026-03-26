@@ -60,24 +60,6 @@ export function About() {
             </p>
           </div>
 
-          {/* Stats */}
-          <div className="grid md:grid-cols-4 gap-6 mb-20">
-            {stats.map((stat, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/5 hover:border-primary/30 transition-all duration-300"
-              >
-                <div className="text-4xl font-bold bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-gray-300 font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
 
           {/* Content */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
