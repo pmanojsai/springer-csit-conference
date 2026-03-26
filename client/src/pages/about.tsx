@@ -192,8 +192,12 @@ export default function AboutPage() {
                   className="lg:col-span-1"
                 >
                   <div className="relative h-full min-h-[500px] rounded-2xl overflow-hidden">
-                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2940&auto=format&fit=crop')] bg-cover bg-center"></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-slate-900/40"></div>
+                    <img
+                      src="/csit.jpg"
+                      alt="CSIT Department - KL University"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
                   </div>
                 </motion.div>
 
