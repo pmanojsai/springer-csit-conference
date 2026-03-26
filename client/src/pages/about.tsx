@@ -108,7 +108,7 @@ export default function AboutPage() {
                     </div>
                     
                     <p className="text-slate-600 mb-6 leading-relaxed">
-                      Koneru Lakshmaiah Education Foundation (KLEF) Deemed to be university was established in 1980-81, as KL College of Engineering, which was upgraded to KL College of Engineering Autonomous in 2006 by UGC, and was declared as a Deemed to be University in 2009 by UGC, MHRD Government of India. The university has expanded its presence with multiple campuses including Hyderabad (Moinabad and Bachupally). KLEF (Deemed to be University) offers outstanding undergraduate, postgraduate and doctoral programmes in engineering and management streams from its campuses. KLEF has established an ecosystem to promote innovation, including a centre for Innovation, Incubation and Entrepreneurship Cell (IIEC), leading to start-ups in different disciplines. Through publishing research articles in various national and international refereed journals, particularly in Scopus/WoS/SCI Indexed journals, research has taken a quantum leap towards improving its quality, resulting in good h-index.
+                      Koneru Lakshmaiah Education Foundation (KLEF) Deemed to be university was established in 1980-81, as KL College of Engineering, which was upgraded to KL College of Engineering Autonomous in 2006 by UGC, and was declared as a Deemed to be University in 2009 by UGC, MHRD Government of India. The university has expanded its presence with multiple campuses including Hyderabad (Moinabad and Bowrampet Campus). KLEF (Deemed to be University) offers outstanding undergraduate, postgraduate and doctoral programmes in engineering and management streams from its campuses. KLEF has established an ecosystem to promote innovation, including a centre for Innovation, Incubation and Entrepreneurship Cell (IIEC), leading to start-ups in different disciplines. Through publishing research articles in various national and international refereed journals, particularly in Scopus/WoS/SCI Indexed journals, research has taken a quantum leap towards improving its quality, resulting in good h-index.
                     </p>
                     
                     <div className="grid grid-cols-2 gap-4 mb-6">
@@ -132,7 +132,7 @@ export default function AboutPage() {
                     
                     <div className="flex items-center gap-4 text-slate-600">
                       <MapPin className="w-5 h-5 text-primary" />
-                      <span>Bachupally, Hyderabad, Telangana</span>
+                      <span>Bowrampet Campus, Hyderabad, Telangana</span>
                     </div>
                   </div>
                 </div>
@@ -294,7 +294,7 @@ export default function AboutPage() {
                       <MapPin className="w-5 h-5 text-primary" />
                       <div>
                         <div className="font-semibold text-slate-900">KLH University</div>
-                        <div className="text-sm text-slate-600">Bachupally, Hyderabad</div>
+                        <div className="text-sm text-slate-600">Bowrampet Campus, Hyderabad</div>
                       </div>
                     </div>
                   </div>

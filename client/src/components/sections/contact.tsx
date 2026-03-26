@@ -99,7 +99,7 @@ export function Contact() {
                 </div>
                 <div className="h-[500px] w-full">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.007093964072!2d80.23151531528765!3d12.97186819085625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d4f5b3a3b5d%3A0x6e8f9a1c3e3e3e3e!2sKoneru%20Lakshmaiah%20Education%20Foundation!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.17643537233!2d78.40193977516625!3d17.547294383366835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8f21c7b459b5%3A0xc307c84e835d6187!2sKLH%20University%20Bowrampet%20Hyderabad!5e0!3m2!1sen!2sin!4v1711484128414!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

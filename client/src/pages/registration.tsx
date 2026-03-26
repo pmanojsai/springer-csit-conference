@@ -117,7 +117,7 @@ export default function RegistrationPage() {
                 </div>
                 <div className="flex items-center gap-2 text-slate-300">
                   <Building className="w-5 h-5 text-primary" />
-                  <span>KLH University, Bachupally, Hyderabad</span>
+                  <span>KLH University, Bowrampet Campus, Hyderabad</span>
                 </div>
               </div>
             </motion.div>

@@ -77,7 +77,7 @@ export default function DatesPage() {
     {
       date: "October 24-26, 2026",
       title: "Conference Dates",
-      description: "Main conference event at KLH University, Bachupally, Hyderabad",
+      description: "Main conference event at KLH University, Bowrampet Campus, Hyderabad",
       status: "highlight",
       icon: <Award className="w-5 h-5" />
     }
@@ -151,7 +151,7 @@ export default function DatesPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <div className="flex items-center gap-2 text-slate-300">
                   <MapPin className="w-5 h-5 text-primary" />
-                  <span>KLH University, Bachupally, Hyderabad</span>
+                  <span>KLH University, Bowrampet Campus, Hyderabad</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-300">
                   <Calendar className="w-5 h-5 text-primary" />
@@ -311,7 +311,7 @@ export default function DatesPage() {
                       <MapPin className="w-5 h-5" />
                       <div>
                         <div className="font-semibold">Venue</div>
-                        <div className="text-sm opacity-90">KLH University, Bachupally, Hyderabad</div>
+                        <div className="text-sm opacity-90">KLH University, Bowrampet Campus, Hyderabad</div>
                       </div>
                     </div>
                   </div>
