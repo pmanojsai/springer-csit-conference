@@ -20,26 +20,26 @@ import {
 
 // ── Real data ──────────────────────────────────────────────────────────────
 const chiefPatrons = [
-  { name: "Dr. K. Satyanarayana", designation: "President", affiliation: "KL University" },
-  { name: "Dr. G. Pardha Saradhi", designation: "Vice-Chancellor", affiliation: "KL University" },
+  { name: "Dr. K. Satyanarayana", designation: "President", affiliation: "KLH University" },
+  { name: "Dr. G. Pardha Saradhi", designation: "Vice-Chancellor", affiliation: "KLH University" },
 ];
 
 const coPatrons = [
-  { name: "Dr. L. S. S. Reddy", designation: "Pro Vice-Chancellor", affiliation: "KL University" },
-  { name: "Dr. G. R. C. Reddy", designation: "Registrar", affiliation: "KL University" },
+  { name: "Dr. L. S. S. Reddy", designation: "Pro Vice-Chancellor", affiliation: "KLH University" },
+  { name: "Dr. G. R. C. Reddy", designation: "Registrar", affiliation: "KLH University" },
 ];
 
 const generalChairs = [
-  { name: "Dr. V. Krishna", designation: "Professor", affiliation: "Department of CSE, KL University", email: "krishna@kluniversity.in" },
-  { name: "Dr. A. Rama Mohan Reddy", designation: "Professor & Dean", affiliation: "School of Computer Science, KL University", email: "ramamohan@kluniversity.in" },
+  { name: "Dr. V. Krishna", designation: "Professor", affiliation: "Department of CSE, KLH University", email: "krishna@kluniversity.in" },
+  { name: "Dr. A. Rama Mohan Reddy", designation: "Professor & Dean", affiliation: "School of Computer Science, KLH University", email: "ramamohan@kluniversity.in" },
 ];
 
 const convener = [
-  { name: "Dr. P. Suresh", designation: "Associate Professor", affiliation: "Department of CSE, KL University", email: "suresh@kluniversity.in", phone: "+91 98765 43210" },
+  { name: "Dr. P. Suresh", designation: "Associate Professor", affiliation: "Department of CSE, KLH University", email: "suresh@kluniversity.in", phone: "+91 98765 43210" },
 ];
 
 const coConvener = [
-  { name: "Dr. K. Divya", designation: "Assistant Professor", affiliation: "Department of CSE, KL University", email: "divya@kluniversity.in" },
+  { name: "Dr. K. Divya", designation: "Assistant Professor", affiliation: "Department of CSE, KLH University", email: "divya@kluniversity.in" },
 ];
 
 const steeringCommittee = [
@@ -50,12 +50,12 @@ const steeringCommittee = [
 ];
 
 const organizingCommittee = [
-  { name: "Dr. K. V. S. N. R. Raju", designation: "Associate Professor", affiliation: "KL University" },
-  { name: "Dr. T. Ramesh",           designation: "Associate Professor", affiliation: "KL University" },
-  { name: "Dr. S. Lakshmi",          designation: "Assistant Professor", affiliation: "KL University" },
-  { name: "Dr. M. Srinivas",         designation: "Assistant Professor", affiliation: "KL University" },
-  { name: "Dr. P. Anusha",           designation: "Assistant Professor", affiliation: "KL University" },
-  { name: "Dr. K. Chandrasekhar",    designation: "Assistant Professor", affiliation: "KL University" },
+  { name: "Dr. K. V. S. N. R. Raju", designation: "Associate Professor", affiliation: "KLH University" },
+  { name: "Dr. T. Ramesh",           designation: "Associate Professor", affiliation: "KLH University" },
+  { name: "Dr. S. Lakshmi",          designation: "Assistant Professor", affiliation: "KLH University" },
+  { name: "Dr. M. Srinivas",         designation: "Assistant Professor", affiliation: "KLH University" },
+  { name: "Dr. P. Anusha",           designation: "Assistant Professor", affiliation: "KLH University" },
+  { name: "Dr. K. Chandrasekhar",    designation: "Assistant Professor", affiliation: "KLH University" },
 ];
 
 const internationalTAC = [
@@ -236,7 +236,7 @@ export default function CommitteePage() {
               </h1>
 
               <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Meet the distinguished leaders and experts organizing AICDF 2026
+                Meet the distinguished leaders and experts organizing AI-CQCOM 2026
               </p>
             </motion.div>
           </div>
@@ -282,7 +282,7 @@ export default function CommitteePage() {
             >
               <h2 className="text-3xl font-bold text-white mb-4">Get in Touch with the Committee</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                For any queries about AICDF 2026, please feel free to contact our committee members
+                For any queries about AI-CQCOM 2026, please feel free to contact our committee members
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button

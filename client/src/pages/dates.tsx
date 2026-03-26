@@ -77,7 +77,7 @@ export default function DatesPage() {
     {
       date: "October 24-26, 2026",
       title: "Conference Dates",
-      description: "Main conference event at KL University, Bachupally, Hyderabad",
+      description: "Main conference event at KLH University, Bachupally, Hyderabad",
       status: "highlight",
       icon: <Award className="w-5 h-5" />
     }
@@ -145,13 +145,13 @@ export default function DatesPage() {
               </h1>
               
               <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Mark your calendar for AICDF 2026 - Important dates and deadlines
+                Mark your calendar for AI-CQCOM 2026 - Important dates and deadlines
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <div className="flex items-center gap-2 text-slate-300">
                   <MapPin className="w-5 h-5 text-primary" />
-                  <span>KL University, Bachupally, Hyderabad</span>
+                  <span>KLH University, Bachupally, Hyderabad</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-300">
                   <Calendar className="w-5 h-5 text-primary" />
@@ -177,7 +177,7 @@ export default function DatesPage() {
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-primary to-blue-500 mx-auto mb-8 rounded-full"></div>
               <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Stay updated with all important deadlines and events for AICDF 2026
+                Stay updated with all important deadlines and events for AI-CQCOM 2026
               </p>
             </motion.div>
 
@@ -311,7 +311,7 @@ export default function DatesPage() {
                       <MapPin className="w-5 h-5" />
                       <div>
                         <div className="font-semibold">Venue</div>
-                        <div className="text-sm opacity-90">KL University, Bachupally, Hyderabad</div>
+                        <div className="text-sm opacity-90">KLH University, Bachupally, Hyderabad</div>
                       </div>
                     </div>
                   </div>
@@ -349,7 +349,7 @@ export default function DatesPage() {
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-3xl font-bold text-white mb-4">
-                  Ready to Join AICDF 2026?
+                  Ready to Join AI-CQCOM 2026?
                 </h2>
                 <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                   Don't miss important deadlines - Register now and be part of this prestigious conference

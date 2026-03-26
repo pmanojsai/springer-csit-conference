@@ -176,7 +176,7 @@ export const RegistrationForm = forwardRef<HTMLDivElement, RegistrationFormProps
               Registration Successful!
             </h3>
             <p className="text-lg text-slate-600 mb-2">
-              Thank you for registering for AICDF 2026
+              Thank you for registering for AI-CQCOM 2026
             </p>
             <p className="text-slate-500 mb-8">
               You will receive a confirmation email shortly at <strong>{formData.email}</strong>
@@ -217,7 +217,7 @@ export const RegistrationForm = forwardRef<HTMLDivElement, RegistrationFormProps
               Complete Your Registration
             </h3>
             <p className="text-slate-600">
-              Fill in your details to register for AICDF 2026
+              Fill in your details to register for AI-CQCOM 2026
             </p>
           </div>
 

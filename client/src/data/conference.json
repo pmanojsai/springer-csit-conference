@@ -1,13 +1,13 @@
 {
   "context": {
     "title": "International Conference on Artificial Intelligence, Cyber Security & Digital Forensics",
-    "acronym": "AICDF 2026",
+    "acronym": "AI-CQCOM 2026",
     "theme": "Artificial Intelligence, Data Science, Cyber Forensics",
     "mode": "Hybrid (In-person + Virtual)",
     "frequency": "Annual",
-    "organizer": "KL University",
+    "organizer": "KLH University",
     "dates": "October 24-26, 2026",
-    "location": "KL University, Bachupally, Hyderabad"
+    "location": "KLH University, Bachupally, Hyderabad"
   },
   "hero": {
     "tagline": "Advancing the Frontiers of Secure Intelligence",
@@ -20,7 +20,7 @@
   },
   "about": {
     "mission": "To foster innovation and collaboration at the intersection of AI, Cyber Security, and Digital Forensics.",
-    "overview": "AICDF 2026 brings together leading academicians, scientists, researchers, and scholars to exchange and share their experiences and research results on all aspects of Artificial Intelligence, Cyber Security, and Digital Forensics. It provides a premier interdisciplinary platform to present and discuss the most recent innovations, trends, and concerns as well as practical challenges encountered and solutions adopted in these fields.",
+    "overview": "AI-CQCOM 2026 brings together leading academicians, scientists, researchers, and scholars to exchange and share their experiences and research results on all aspects of Artificial Intelligence, Cyber Security, and Digital Forensics. It provides a premier interdisciplinary platform to present and discuss the most recent innovations, trends, and concerns as well as practical challenges encountered and solutions adopted in these fields.",
     "focusAreas": [
       "Artificial Intelligence and Machine Learning",
       "Network Security & Cryptography",
@@ -68,10 +68,10 @@
     { "name": "Dr. Saroj Kumar Biswas", "role": "Professor", "affiliation": "NIT Silchar", "image": "" }
   ],
   "organizingCommittee": {
-    "patrons": ["Prof. K. Satyanarayana, President, KL University"],
+    "patrons": ["Prof. K. Satyanarayana, President, KLH University"],
     "generalChairs": ["Dr. V. Krishna, Professor"],
     "technicalCoordinators": ["Dr. S. Reddy", "Dr. M. Kumar"],
-    "studentVolunteers": ["Student Branch - KL University"]
+    "studentVolunteers": ["Student Branch - KLH University"]
   },
   "importantDates": [
     { "label": "Paper Submission Deadline", "date": "July 15, 2026" },
@@ -88,8 +88,8 @@
     ]
   },
   "contact": {
-    "email": "contact@aicdf2026.org",
+    "email": "contact@AI-CQCOM2026.org",
     "phone": "+91 123 456 7890",
-    "address": "KL University, Bachupally, Hyderabad, Telangana 500090"
+    "address": "KLH University, Bachupally, Hyderabad, Telangana 500090"
   }
 }

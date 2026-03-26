@@ -81,7 +81,7 @@ export default function AboutPage() {
               </h1>
               
               <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Learn about KL University, CSIT Department, and the prestigious AICDF 2026 conference
+                Learn about KLH University, CSIT Department, and the prestigious AI-CQCOM 2026 conference
               </p>
             </motion.div>
           </div>
@@ -104,7 +104,7 @@ export default function AboutPage() {
                       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
                         <Building className="w-6 h-6" />
                       </div>
-                      <h2 className="text-3xl font-bold text-slate-900">About KL University</h2>
+                      <h2 className="text-3xl font-bold text-slate-900">About KLH University</h2>
                     </div>
                     
                     <p className="text-slate-600 mb-6 leading-relaxed">
@@ -147,7 +147,7 @@ export default function AboutPage() {
                   <div className="relative h-full min-h-[400px] rounded-2xl overflow-hidden">
                     <img
                       src="/klu.avif"
-                      alt="KL University Campus"
+                      alt="KLH University Campus"
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-slate-900/30"></div>
@@ -198,7 +198,7 @@ export default function AboutPage() {
                   <div className="relative h-full min-h-[500px] rounded-2xl overflow-hidden">
                     <img
                       src="/csit.jpg"
-                      alt="CSIT Department - KL University"
+                      alt="CSIT Department - KLH University"
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
@@ -251,12 +251,12 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* About AICDF 2026 Section */}
+        {/* About AI-CQCOM 2026 Section */}
         <section className="py-24 bg-white">
           <div className="container px-4 mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-6 leading-tight">
-                About <span className="text-primary">AICDF 2026</span>
+                About <span className="text-primary">AI-CQCOM 2026</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-primary to-blue-500 mx-auto mb-8 rounded-full"></div>
               <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -275,7 +275,7 @@ export default function AboutPage() {
                 <div className="bg-slate-50 p-8 rounded-xl border border-slate-200">
                   <h3 className="text-2xl font-bold text-slate-900 mb-6">Conference Overview</h3>
                   <p className="text-slate-600 mb-6 leading-relaxed">
-                    AICDF 2026 is a premier international conference that brings together researchers, academicians, and industry professionals to discuss the latest advancements in Artificial Intelligence, Cyber Security, and Digital Forensics. The conference serves as a platform for sharing innovative ideas, presenting research findings, and fostering collaborations.
+                    AI-CQCOM 2026 is a premier international conference that brings together researchers, academicians, and industry professionals to discuss the latest advancements in Artificial Intelligence, Cyber Security, and Digital Forensics. The conference serves as a platform for sharing innovative ideas, presenting research findings, and fostering collaborations.
                   </p>
                   
                   <p className="text-slate-600 mb-6 leading-relaxed">
@@ -293,7 +293,7 @@ export default function AboutPage() {
                     <div className="flex items-center gap-3">
                       <MapPin className="w-5 h-5 text-primary" />
                       <div>
-                        <div className="font-semibold text-slate-900">KL University</div>
+                        <div className="font-semibold text-slate-900">KLH University</div>
                         <div className="text-sm text-slate-600">Bachupally, Hyderabad</div>
                       </div>
                     </div>
@@ -375,7 +375,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-3xl font-bold text-white mb-4">
-                  Join Us at AICDF 2026
+                  Join Us at AI-CQCOM 2026
                 </h2>
                 <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                   Be part of this prestigious international conference and contribute to the future of AI and cybersecurity

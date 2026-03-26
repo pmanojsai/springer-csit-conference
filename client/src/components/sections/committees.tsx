@@ -56,14 +56,14 @@ export function Committees() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-bold uppercase tracking-widest text-sm">AICDF 2026</span>
+          <span className="text-primary font-bold uppercase tracking-widest text-sm">AI-CQCOM 2026</span>
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 mt-2 mb-4">
             Technical Advisory Committee
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-blue-500 mx-auto rounded-full" />
           <p className="text-slate-600 mt-6 max-w-2xl mx-auto">
             Eminent researchers and practitioners from leading institutions around the world providing 
-            technical guidance for AICDF 2026.
+            technical guidance for AI-CQCOM 2026.
           </p>
         </motion.div>
 

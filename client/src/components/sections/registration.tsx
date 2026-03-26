@@ -90,7 +90,7 @@ export function Registration() {
           {/* Form */}
           <Card className="border-slate-200 shadow-lg">
             <CardHeader>
-              <CardTitle>Register for AICDF 2026</CardTitle>
+              <CardTitle>Register for AI-CQCOM 2026</CardTitle>
             </CardHeader>
             <CardContent>
               <Form {...form}>

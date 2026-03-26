@@ -62,7 +62,7 @@ export function Navbar() {
             "text-xl md:text-2xl font-light",
             scrolled ? "text-foreground/60" : "text-white/60"
           )}>×</span>
-          <span className="text-primary truncate">AICDF</span>
+          <span className="text-primary truncate">AI-CQCOM</span>
           <span className={cn(scrolled ? "text-foreground" : "text-white")}> 2026</span>
         </div>
 

@@ -6,10 +6,10 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-2">
-            <h2 className="text-2xl font-heading font-bold mb-4"> AICDF 2026</h2>
+            <h2 className="text-2xl font-heading font-bold mb-4"> AI-CQCOM 2026</h2>
             <p className="text-slate-400 mb-6 max-w-md">
               International Conference on Artificial Intelligence, Cyber Security & Digital Forensics.
-              Organized by KL University.
+              Organized by KLH University.
             </p>
             <div className="flex gap-4">
               <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-primary transition-colors">
@@ -39,18 +39,18 @@ export function Footer() {
             <ul className="space-y-2 text-slate-400">
               <li className="flex items-center gap-2">
                 <Mail size={16} />
-                <span>contact@aicdf2026.org</span>
+                <span>contact@AI-CQCOM2026.org</span>
               </li>
               <li className="flex items-center gap-2">
                 <Globe size={16} />
-                <span>www.aicdf2026.org</span>
+                <span>www.AI-CQCOM2026.org</span>
               </li>
             </ul>
           </div>
         </div>
         
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
-          <p>© 2026 AICDF. All rights reserved.</p>
+          <p>© 2026 AI-CQCOM. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms of Service</a>

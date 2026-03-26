@@ -28,9 +28,9 @@ export function Hero() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto text-center text-white relative z-10"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/30 border border-primary/50 mb-6">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-xs font-medium tracking-wide uppercase">KL University</span>
+          <div className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-primary/30 border border-primary/50 mb-8">
+            <span className="w-3 h-3 rounded-full bg-primary animate-pulse" />
+            <span className="text-base md:text-lg font-bold tracking-widest uppercase">KLH University</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6 tracking-tight">
@@ -67,7 +67,7 @@ export function Hero() {
                 <DialogHeader>
                   <DialogTitle className="text-2xl font-bold text-white">Call for Papers</DialogTitle>
                   <DialogDescription className="text-slate-300">
-                    Submission guidelines and topics of interest for AICDF 2026
+                    Submission guidelines and topics of interest for AI-CQCOM 2026
                   </DialogDescription>
                 </DialogHeader>
                 <div className="grid gap-6 py-4">

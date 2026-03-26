@@ -107,7 +107,7 @@ export default function RegistrationPage() {
               </h1>
 
               <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Join AICDF 2026 - Secure your spot at the premier AI and Cyber Security conference
+                Join AI-CQCOM 2026 - Secure your spot at the premier AI and Cyber Security conference
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -117,7 +117,7 @@ export default function RegistrationPage() {
                 </div>
                 <div className="flex items-center gap-2 text-slate-300">
                   <Building className="w-5 h-5 text-primary" />
-                  <span>KL University, Bachupally, Hyderabad</span>
+                  <span>KLH University, Bachupally, Hyderabad</span>
                 </div>
               </div>
             </motion.div>
@@ -139,7 +139,7 @@ export default function RegistrationPage() {
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-primary to-blue-500 mx-auto mb-8 rounded-full"></div>
               <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Simple 4-step registration process to join AICDF 2026
+                Simple 4-step registration process to join AI-CQCOM 2026
               </p>
             </motion.div>
 
@@ -356,7 +356,7 @@ export default function RegistrationPage() {
                         <Phone className="w-5 h-5 mt-0.5 flex-shrink-0" />
                         <div>
                           <div className="font-semibold">Support</div>
-                          <div className="text-sm opacity-90">contact@aicdf2026.org | +91 123 456 7890</div>
+                          <div className="text-sm opacity-90">contact@AI-CQCOM2026.org | +91 123 456 7890</div>
                         </div>
                       </div>
                     </div>
@@ -404,7 +404,7 @@ export default function RegistrationPage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl font-bold text-slate-900 mb-4">
-                Ready to Join AICDF 2026?
+                Ready to Join AI-CQCOM 2026?
               </h2>
               <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
                 Don't miss this opportunity to connect with global experts in AI and Cyber Security

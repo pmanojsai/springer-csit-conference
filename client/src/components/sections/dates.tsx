@@ -35,7 +35,7 @@ export function Dates() {
             <h2 className="text-4xl font-heading font-bold text-white mb-4">Important Dates</h2>
             <div className="w-16 h-1 bg-gradient-to-r from-primary to-blue-500 mx-auto mb-8 rounded-full"></div>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Mark your calendars for these key dates and deadlines for AICDF 2026
+              Mark your calendars for these key dates and deadlines for AI-CQCOM 2026
             </p>
           </div>
 

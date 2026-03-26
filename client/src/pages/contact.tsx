@@ -45,7 +45,7 @@ export default function ContactPage() {
               </h1>
               
               <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-                Have questions about AICDF 2026? We're here to help. Reach out to us through any of the channels below.
+                Have questions about AI-CQCOM 2026? We're here to help. Reach out to us through any of the channels below.
               </p>
             </motion.div>
           </div>
@@ -79,7 +79,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-white font-semibold text-lg mb-1">Address</h3>
                       <p className="text-gray-400 text-sm leading-relaxed mb-2">
-                        KL University, Bachupally, Hyderabad, Telangana 500090
+                        KLH University, Bachupally, Hyderabad, Telangana 500090
                       </p>
                       <span className="text-xs text-gray-500">Visit us at our location</span>
                     </div>
@@ -92,8 +92,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-white font-semibold text-lg mb-1">Email</h3>
-                      <a href="mailto:contact@aicdf2026.org" className="text-gray-400 text-sm hover:text-white transition-colors">
-                        contact@aicdf2026.org
+                      <a href="mailto:contact@AI-CQCOM2026.org" className="text-gray-400 text-sm hover:text-white transition-colors">
+                        contact@AI-CQCOM2026.org
                       </a>
                       <p className="text-xs text-gray-500 mt-2">Drop us a message anytime</p>
                     </div>

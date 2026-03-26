@@ -190,7 +190,7 @@ export default function CallForPapersPage() {
               </h1>
               
               <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Submit your research papers to AICDF 2026 and contribute to the advancement of AI, Cyber Security, and Digital Forensics
+                Submit your research papers to AI-CQCOM 2026 and contribute to the advancement of AI, Cyber Security, and Digital Forensics
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -401,7 +401,7 @@ export default function CallForPapersPage() {
                   Ready to Submit Your Research?
                 </h2>
                 <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Join researchers from around the world and share your innovations at AICDF 2026
+                  Join researchers from around the world and share your innovations at AI-CQCOM 2026
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <button className="group px-6 py-3 bg-gradient-to-r from-primary to-blue-600 text-white font-medium rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center">

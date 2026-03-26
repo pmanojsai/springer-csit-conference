@@ -168,7 +168,7 @@ export function About() {
             <div className="relative z-10 p-8 md:p-12">
               <div className="max-w-3xl mx-auto text-center">
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                  Ready to be part of AICDF 2026?
+                  Ready to be part of AI-CQCOM 2026?
                 </h3>
                 <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                   Join us for an unforgettable experience of learning, networking, and innovation at the forefront of AI and cybersecurity.
