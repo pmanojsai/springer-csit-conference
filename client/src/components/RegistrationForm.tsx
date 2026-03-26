@@ -167,7 +167,7 @@ export const RegistrationForm = forwardRef<HTMLDivElement, RegistrationFormProps
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="bg-white border border-slate-200 rounded-2xl shadow-xl p-12 text-center"
+            className="bg-white border border-slate-200 rounded-2xl shadow-xl p-6 md:p-12 text-center"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-100 mb-6">
               <CheckCircle className="w-10 h-10 text-green-600" />
@@ -210,7 +210,7 @@ export const RegistrationForm = forwardRef<HTMLDivElement, RegistrationFormProps
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-white border border-slate-200 rounded-2xl shadow-xl p-8"
+          className="bg-white border border-slate-200 rounded-2xl shadow-xl p-6 md:p-8"
         >
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-slate-900 mb-2">

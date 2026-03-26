@@ -250,10 +250,10 @@ export default function CommitteePage() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="bg-white border border-slate-200 rounded-xl p-6 hover:border-primary/30 transition-all duration-300 hover:shadow-lg"
+      className="bg-white border border-slate-200 rounded-xl p-6 hover:border-primary/30 transition-all duration-300 hover:shadow-lg flex flex-col h-full"
     >
-      <div className="flex items-center gap-4 mb-4">
-        <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/20">
+      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-4 text-center sm:text-left">
+        <div className="w-16 h-16 shrink-0 rounded-full overflow-hidden border-2 border-primary/20">
           <img 
             src={member.image} 
             alt={member.name}
@@ -267,16 +267,16 @@ export default function CommitteePage() {
         </div>
       </div>
       {showContact && (
-        <div className="space-y-2 text-sm">
+        <div className="space-y-2 text-sm mt-auto pt-4 border-t border-slate-100">
           {member.email && (
-            <div className="flex items-center gap-2 text-slate-600">
-              <Mail className="w-4 h-4" />
+            <div className="flex items-center justify-center sm:justify-start gap-2 text-slate-600 break-all sm:break-normal">
+              <Mail className="w-4 h-4 shrink-0" />
               <span>{member.email}</span>
             </div>
           )}
           {member.phone && (
-            <div className="flex items-center gap-2 text-slate-600">
-              <Phone className="w-4 h-4" />
+            <div className="flex items-center justify-center sm:justify-start gap-2 text-slate-600">
+              <Phone className="w-4 h-4 shrink-0" />
               <span>{member.phone}</span>
             </div>
           )}

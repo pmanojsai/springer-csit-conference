@@ -50,19 +50,19 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div 
-          className="font-heading font-bold text-2xl tracking-tighter cursor-pointer flex items-center gap-3"
+          className="font-heading font-bold text-xl md:text-2xl tracking-tighter cursor-pointer flex items-center gap-2 md:gap-3 shrink-0"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <img 
             src="/klh.png" 
             alt="KLH Logo" 
-            className="h-8 w-auto object-contain"
+            className="h-6 md:h-8 w-auto object-contain"
           />
           <span className={cn(
-            "text-2xl font-light",
+            "text-xl md:text-2xl font-light",
             scrolled ? "text-foreground/60" : "text-white/60"
           )}>×</span>
-          <span className="text-primary">AICDF</span>
+          <span className="text-primary truncate">AICDF</span>
           <span className={cn(scrolled ? "text-foreground" : "text-white")}> 2026</span>
         </div>
 
