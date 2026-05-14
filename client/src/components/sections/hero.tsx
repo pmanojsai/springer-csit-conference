@@ -113,7 +113,7 @@ export function Hero() {
                       </li>
                       <li className="flex justify-between items-center">
                         <span className="text-slate-300">Conference Dates</span>
-                        <span className="font-medium">October 15-17, 2026</span>
+                        <span className="font-medium">October 22-24, 2026</span>
                       </li>
                     </ul>
                   </div>

@@ -113,7 +113,7 @@ export default function RegistrationPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <div className="flex items-center gap-2 text-slate-300">
                   <Calendar className="w-5 h-5 text-primary" />
-                  <span>October 24-26, 2026</span>
+                  <span>October 22-24, 2026</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-300">
                   <Building className="w-5 h-5 text-primary" />

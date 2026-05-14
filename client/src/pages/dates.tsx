@@ -75,7 +75,7 @@ export default function DatesPage() {
       icon: <AlertCircle className="w-5 h-5" />
     },
     {
-      date: "October 24-26, 2026",
+      date: "October 22-24, 2026",
       title: "Conference Dates",
       description: "Main conference event at KLH University, Bowrampet Campus, Hyderabad",
       status: "highlight",
@@ -155,7 +155,7 @@ export default function DatesPage() {
                 </div>
                 <div className="flex items-center gap-2 text-slate-300">
                   <Calendar className="w-5 h-5 text-primary" />
-                  <span>October 24-26, 2026</span>
+                  <span>October 22-24, 2026</span>
                 </div>
               </div>
             </motion.div>
@@ -304,7 +304,7 @@ export default function DatesPage() {
                       <Calendar className="w-5 h-5" />
                       <div>
                         <div className="font-semibold">Conference Dates</div>
-                        <div className="text-sm opacity-90">October 24-26, 2026</div>
+                        <div className="text-sm opacity-90">October 22-24, 2026</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">

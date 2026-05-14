@@ -286,7 +286,7 @@ export default function AboutPage() {
                     <div className="flex items-center gap-3">
                       <Calendar className="w-5 h-5 text-primary" />
                       <div>
-                        <div className="font-semibold text-slate-900">October 24-26, 2026</div>
+                        <div className="font-semibold text-slate-900">October 22-24, 2026</div>
                         <div className="text-sm text-slate-600">3-Day Conference</div>
                       </div>
                     </div>

@@ -6,7 +6,7 @@
     "mode": "Hybrid (In-person + Virtual)",
     "frequency": "Annual",
     "organizer": "KLH University",
-    "dates": "October 24-26, 2026",
+    "dates": "October 22-24, 2026",
     "location": "KLH University, Bowrampet Campus, Hyderabad"
   },
   "hero": {
@@ -78,7 +78,7 @@
     { "label": "Acceptance Notification", "date": "August 30, 2026" },
     { "label": "Camera-Ready Submission", "date": "September 15, 2026" },
     { "label": "Registration Deadline", "date": "September 30, 2026" },
-    { "label": "Conference Dates", "date": "October 24-26, 2026" }
+    { "label": "Conference Dates", "date": "October 22-24, 2026" }
   ],
   "registration": {
     "fees": [

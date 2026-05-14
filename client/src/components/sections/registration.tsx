@@ -198,9 +198,7 @@ export function Registration() {
                   <Button type="submit" className="w-full bg-primary hover:bg-primary/90" size="lg" disabled>
                     Pay with Razorpay
                   </Button>
-                  <p className="text-xs text-center text-muted-foreground font-mono">
-                    // TODO: Insert Razorpay script & API keys here
-                  </p>
+
                 </form>
               </Form>
             </CardContent>

@@ -54,7 +54,7 @@ export default function CallForPapersPage() {
       status: "upcoming" 
     },
     { 
-      date: "October 15-17, 2026", 
+      date: "October 22-24, 2026", 
       event: "Conference Dates", 
       status: "upcoming" 
     }
